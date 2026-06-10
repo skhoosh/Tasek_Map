@@ -1,0 +1,2297 @@
+{
+  "nodes": {
+    "n_G_0001": {
+      "lat": 1.513917857693954,
+      "lon": 103.65534305410286,
+      "floor": null,
+      "type": null,
+      "name": null
+    },
+    "n_G_0002": {
+      "lat": 1.51389018957134,
+      "lon": 103.65544260768321,
+      "floor": null,
+      "type": null,
+      "name": null
+    },
+    "n_G_0003": {
+      "lat": 1.514098655361413,
+      "lon": 103.65561710019045,
+      "floor": null,
+      "type": null,
+      "name": null
+    },
+    "n_G_0004": {
+      "lat": 1.514326145357814,
+      "lon": 103.65574815627345,
+      "floor": null,
+      "type": null,
+      "name": null
+    },
+    "n_G_0005": {
+      "lat": 1.514341575066156,
+      "lon": 103.6556632324403,
+      "floor": null,
+      "type": null,
+      "name": null
+    },
+    "n_G_0006": {
+      "lat": 1.514129346238179,
+      "lon": 103.65548264290162,
+      "floor": null,
+      "type": null,
+      "name": null
+    },
+    "n_G_0007": {
+      "lat": 1.514091325751784,
+      "lon": 103.65544635137195,
+      "floor": null,
+      "type": null,
+      "name": null
+    },
+    "n_G_0008": {
+      "lat": 1.514065187264004,
+      "lon": 103.65542140151487,
+      "floor": null,
+      "type": null,
+      "name": null
+    },
+    "n_G_0009": {
+      "lat": 1.51403033050646,
+      "lon": 103.65538812984741,
+      "floor": null,
+      "type": null,
+      "name": null
+    },
+    "n_G_0010": {
+      "lat": 1.514279612954167,
+      "lon": 103.65502428916324,
+      "floor": null,
+      "type": null,
+      "name": null
+    },
+    "n_G_0011": {
+      "lat": 1.514392605881924,
+      "lon": 103.65454863192986,
+      "floor": null,
+      "type": null,
+      "name": null
+    },
+    "n_G_0012": {
+      "lat": 1.514705421227124,
+      "lon": 103.65468074858717,
+      "floor": null,
+      "type": null,
+      "name": null
+    },
+    "n_G_0013": {
+      "lat": 1.513961314150355,
+      "lon": 103.65459895663098,
+      "floor": null,
+      "type": null,
+      "name": null
+    },
+    "n_G_0014": {
+      "lat": 1.51413268422649,
+      "lon": 103.65403828481656,
+      "floor": null,
+      "type": null,
+      "name": null
+    },
+    "n_G_0015": {
+      "lat": 1.514490447979066,
+      "lon": 103.65430747768703,
+      "floor": null,
+      "type": null,
+      "name": null
+    },
+    "n_G_0016": {
+      "lat": 1.514099598040463,
+      "lon": 103.6552157478274,
+      "floor": null,
+      "type": null,
+      "name": null
+    },
+    "n_G_0017": {
+      "lat": 1.513759433355223,
+      "lon": 103.65555320957459,
+      "floor": null,
+      "type": null,
+      "name": null
+    },
+    "n_G_0018": {
+      "lat": 1.513956304072166,
+      "lon": 103.65574182448366,
+      "floor": null,
+      "type": null,
+      "name": null
+    },
+    "n_G_0019": {
+      "lat": 1.514319613638614,
+      "lon": 103.6555871314582,
+      "floor": null,
+      "type": null,
+      "name": null
+    },
+    "n_G_0020": {
+      "lat": 1.514209566095372,
+      "lon": 103.65409044759548,
+      "floor": null,
+      "type": null,
+      "name": null
+    },
+    "n_G_0021": {
+      "lat": 1.514345804530117,
+      "lon": 103.65429025908323,
+      "floor": null,
+      "type": null,
+      "name": null
+    },
+    "n_G_0022": {
+      "lat": 1.514415768153041,
+      "lon": 103.65435675942821,
+      "floor": null,
+      "type": null,
+      "name": null
+    },
+    "n_G_0023": {
+      "lat": 1.514485784903788,
+      "lon": 103.65442331027333,
+      "floor": null,
+      "type": null,
+      "name": null
+    },
+    "n_G_0024": {
+      "lat": 1.514414332576006,
+      "lon": 103.65449794182076,
+      "floor": null,
+      "type": null,
+      "name": null
+    },
+    "n_G_0025": {
+      "lat": 1.514344715439083,
+      "lon": 103.65457065651947,
+      "floor": null,
+      "type": null,
+      "name": null
+    },
+    "n_G_0026": {
+      "lat": 1.514290272594663,
+      "lon": 103.65447596670518,
+      "floor": null,
+      "type": null,
+      "name": null
+    },
+    "n_G_0027": {
+      "lat": 1.514266901995872,
+      "lon": 103.65434941475688,
+      "floor": null,
+      "type": null,
+      "name": null
+    },
+    "n_G_0028": {
+      "lat": 1.514153505717835,
+      "lon": 103.65461882328515,
+      "floor": null,
+      "type": null,
+      "name": null
+    },
+    "n_G_0029": {
+      "lat": 1.514243440737622,
+      "lon": 103.6546764373578,
+      "floor": null,
+      "type": null,
+      "name": null
+    },
+    "n_G_0030": {
+      "lat": 1.514001162687229,
+      "lon": 103.65462702193932,
+      "floor": null,
+      "type": null,
+      "name": null
+    },
+    "n_G_0031": {
+      "lat": 1.514076624991248,
+      "lon": 103.65469912721095,
+      "floor": null,
+      "type": null,
+      "name": null
+    },
+    "n_G_0032": {
+      "lat": 1.514152399178358,
+      "lon": 103.65477152973428,
+      "floor": null,
+      "type": null,
+      "name": null
+    },
+    "n_G_0033": {
+      "lat": 1.513812321870495,
+      "lon": 103.65458272519075,
+      "floor": null,
+      "type": null,
+      "name": null
+    },
+    "n_G_0034": {
+      "lat": 1.513858186774003,
+      "lon": 103.65445246720061,
+      "floor": null,
+      "type": null,
+      "name": null
+    },
+    "n_G_0035": {
+      "lat": 1.513913163710476,
+      "lon": 103.65450586668912,
+      "floor": null,
+      "type": null,
+      "name": null
+    },
+    "n_G_0036": {
+      "lat": 1.513879646298215,
+      "lon": 103.65447331098859,
+      "floor": null,
+      "type": null,
+      "name": null
+    },
+    "n_G_0037": {
+      "lat": 1.514144994939051,
+      "lon": 103.65415697405813,
+      "floor": null,
+      "type": null,
+      "name": null
+    },
+    "n_G_0038": {
+      "lat": 1.514200542533711,
+      "lon": 103.65421018467583,
+      "floor": null,
+      "type": null,
+      "name": null
+    },
+    "n_G_0039": {
+      "lat": 1.514304684332392,
+      "lon": 103.65430994506464,
+      "floor": null,
+      "type": null,
+      "name": null
+    },
+    "n_G_0040": {
+      "lat": 1.514563691588988,
+      "lon": 103.65469078111227,
+      "floor": null,
+      "type": null,
+      "name": null
+    },
+    "n_G_0041": {
+      "lat": 1.514550148956221,
+      "lon": 103.65462809659017,
+      "floor": null,
+      "type": null,
+      "name": null
+    },
+    "n_G_0042": {
+      "lat": 1.514621833085642,
+      "lon": 103.65455262392773,
+      "floor": null,
+      "type": null,
+      "name": null
+    },
+    "n_G_0043": {
+      "lat": 1.514458365027537,
+      "lon": 103.65480080001383,
+      "floor": null,
+      "type": null,
+      "name": null
+    },
+    "n_G_0044": {
+      "lat": 1.514333794017664,
+      "lon": 103.65493092068785,
+      "floor": null,
+      "type": null,
+      "name": null
+    },
+    "n_G_0045": {
+      "lat": 1.514307296190497,
+      "lon": 103.65495859899994,
+      "floor": null,
+      "type": null,
+      "name": null
+    },
+    "n_G_0046": {
+      "lat": 1.514237290305184,
+      "lon": 103.65489153370386,
+      "floor": null,
+      "type": null,
+      "name": null
+    },
+    "n_G_0047": {
+      "lat": 1.514079420257114,
+      "lon": 103.65519662685026,
+      "floor": null,
+      "type": null,
+      "name": null
+    },
+    "n_G_0048": {
+      "lat": 1.513952737575383,
+      "lon": 103.65532895326244,
+      "floor": null,
+      "type": null,
+      "name": null
+    },
+    "n_G_0049": {
+      "lat": 1.513880914144489,
+      "lon": 103.65540397643643,
+      "floor": null,
+      "type": null,
+      "name": null
+    },
+    "n_G_0050": {
+      "lat": 1.514181110098411,
+      "lon": 103.65554773842499,
+      "floor": null,
+      "type": null,
+      "name": null
+    },
+    "n_G_0051": {
+      "lat": 1.514093225321211,
+      "lon": 103.6556008513205,
+      "floor": null,
+      "type": null,
+      "name": null
+    },
+    "n_G_0052": {
+      "lat": 1.514261234066118,
+      "lon": 103.65562449869506,
+      "floor": null,
+      "type": null,
+      "name": null
+    },
+    "n_G_0053": {
+      "lat": 1.514260883693953,
+      "lon": 103.65576148344016,
+      "floor": null,
+      "type": null,
+      "name": null
+    },
+    "n_G_0054": {
+      "lat": 1.51380706010797,
+      "lon": 103.6555329789399,
+      "floor": null,
+      "type": null,
+      "name": null
+    },
+    "n_G_0055": {
+      "lat": 1.513919925178121,
+      "lon": 103.65567255287255,
+      "floor": null,
+      "type": null,
+      "name": null
+    },
+    "n_G_0056": {
+      "lat": 1.513921864862986,
+      "lon": 103.65568920408221,
+      "floor": null,
+      "type": null,
+      "name": null
+    },
+    "n_G_0057": {
+      "lat": 1.51393603994638,
+      "lon": 103.65568712420152,
+      "floor": null,
+      "type": null,
+      "name": null
+    },
+    "n_G_0058": {
+      "lat": 1.514408032330867,
+      "lon": 103.65502547294288,
+      "floor": null,
+      "type": null,
+      "name": null
+    },
+    "n_G_0059": {
+      "lat": 1.514416690769649,
+      "lon": 103.65503405909135,
+      "floor": null,
+      "type": null,
+      "name": null
+    },
+    "n_G_0060": {
+      "lat": 1.51444546338259,
+      "lon": 103.6550268456438,
+      "floor": null,
+      "type": null,
+      "name": null
+    },
+    "n_G_0061": {
+      "lat": 1.514423442009787,
+      "lon": 103.65423061106414,
+      "floor": null,
+      "type": null,
+      "name": null
+    },
+    "n_G_0062": {
+      "lat": 1.514431529568301,
+      "lon": 103.65422224720372,
+      "floor": null,
+      "type": null,
+      "name": null
+    },
+    "n_G_0063": {
+      "lat": 1.514429727862745,
+      "lon": 103.65428729055155,
+      "floor": null,
+      "type": null,
+      "name": null
+    },
+    "n_G_0064": {
+      "lat": 1.514396811316923,
+      "lon": 103.65427160711562,
+      "floor": null,
+      "type": null,
+      "name": null
+    },
+    "n_G_0065": {
+      "lat": 1.514296260456401,
+      "lon": 103.6548597348644,
+      "floor": null,
+      "type": null,
+      "name": null
+    },
+    "n_G_0066": {
+      "lat": 1.51431098116453,
+      "lon": 103.65487365040286,
+      "floor": null,
+      "type": null,
+      "name": null
+    },
+    "n_G_0067": {
+      "lat": 1.51440504369233,
+      "lon": 103.65477540245863,
+      "floor": null,
+      "type": null,
+      "name": null
+    },
+    "n_G_0068": {
+      "lat": 1.514390035093873,
+      "lon": 103.65476121477542,
+      "floor": null,
+      "type": null,
+      "name": null
+    },
+    "n_G_0069": {
+      "lat": 1.514345667109062,
+      "lon": 103.65435372770027,
+      "floor": null,
+      "type": null,
+      "name": null
+    },
+    "n_G_0070": {
+      "lat": 1.514331111637309,
+      "lon": 103.65436892693421,
+      "floor": null,
+      "type": null,
+      "name": null
+    },
+    "n_G_0071": {
+      "lat": 1.514443874014171,
+      "lon": 103.6544478369788,
+      "floor": null,
+      "type": null,
+      "name": null
+    },
+    "n_G_0072": {
+      "lat": 1.514429893143896,
+      "lon": 103.65446249065519,
+      "floor": null,
+      "type": null,
+      "name": null
+    },
+    "n_G_0073": {
+      "lat": 1.514119568975389,
+      "lon": 103.65421921446286,
+      "floor": null,
+      "type": null,
+      "name": null
+    },
+    "n_G_0074": {
+      "lat": 1.514134289688681,
+      "lon": 103.6542331299975,
+      "floor": null,
+      "type": null,
+      "name": null
+    },
+    "n_G_0075": {
+      "lat": 1.514025506472411,
+      "lon": 103.65431746242183,
+      "floor": null,
+      "type": null,
+      "name": null
+    },
+    "n_G_0076": {
+      "lat": 1.514040227184754,
+      "lon": 103.65433137795462,
+      "floor": null,
+      "type": null,
+      "name": null
+    },
+    "n_G_0077": {
+      "lat": 1.513840001546174,
+      "lon": 103.65453009818421,
+      "floor": null,
+      "type": null,
+      "name": null
+    },
+    "n_G_0078": {
+      "lat": 1.51382599729308,
+      "lon": 103.65454472563835,
+      "floor": null,
+      "type": null,
+      "name": null
+    },
+    "n_G_0079": {
+      "lat": 1.513938238268123,
+      "lon": 103.65462419515963,
+      "floor": null,
+      "type": null,
+      "name": null
+    },
+    "n_G_0080": {
+      "lat": 1.513924241776052,
+      "lon": 103.65463885011914,
+      "floor": null,
+      "type": null,
+      "name": null
+    },
+    "n_G_0081": {
+      "lat": 1.513663699748528,
+      "lon": 103.65521013573478,
+      "floor": null,
+      "type": null,
+      "name": null
+    },
+    "n_G_0082": {
+      "lat": 1.513651279195196,
+      "lon": 103.65522310889668,
+      "floor": null,
+      "type": null,
+      "name": null
+    },
+    "n_G_0083": {
+      "lat": 1.513747489921438,
+      "lon": 103.65529041217353,
+      "floor": null,
+      "type": null,
+      "name": null
+    },
+    "n_G_0084": {
+      "lat": 1.513735069456205,
+      "lon": 103.65530338533397,
+      "floor": null,
+      "type": null,
+      "name": null
+    },
+    "n_G_0085": {
+      "lat": 1.513912984274774,
+      "lon": 103.65539089747675,
+      "floor": null,
+      "type": null,
+      "name": null
+    },
+    "n_G_0086": {
+      "lat": 1.514038384119791,
+      "lon": 103.65541776639596,
+      "floor": null,
+      "type": null,
+      "name": null
+    },
+    "n_G_0087": {
+      "lat": 1.514262486997882,
+      "lon": 103.65565748319136,
+      "floor": null,
+      "type": null,
+      "name": null
+    },
+    "n_G_0088": {
+      "lat": 1.514137114136319,
+      "lon": 103.65563051186744,
+      "floor": null,
+      "type": null,
+      "name": null
+    },
+    "n_G_0089": {
+      "lat": 1.513940798896276,
+      "lon": 103.65566862926114,
+      "floor": null,
+      "type": null,
+      "name": null
+    },
+    "n_G_0090": {
+      "lat": 1.514022775203021,
+      "lon": 103.65539605062155,
+      "floor": null,
+      "type": null,
+      "name": null
+    },
+    "n_G_0091": {
+      "lat": 1.514057571277922,
+      "lon": 103.65542938590684,
+      "floor": null,
+      "type": null,
+      "name": null
+    },
+    "n_G_0092": {
+      "lat": 1.514083664255244,
+      "lon": 103.65545438347574,
+      "floor": null,
+      "type": null,
+      "name": null
+    },
+    "n_G_0093": {
+      "lat": 1.514121618548194,
+      "lon": 103.65549074440122,
+      "floor": null,
+      "type": null,
+      "name": null
+    },
+    "n_G_0094": {
+      "lat": 1.514104121072874,
+      "lon": 103.6556112904509,
+      "floor": null,
+      "type": null,
+      "name": null
+    },
+    "n_G_0095": {
+      "lat": 1.513929009610613,
+      "lon": 103.65535373831136,
+      "floor": null,
+      "type": null,
+      "name": null
+    },
+    "n_G_0096": {
+      "lat": 1.514261217639477,
+      "lon": 103.65500673036132,
+      "floor": null,
+      "type": null,
+      "name": null
+    },
+    "n_G_0097": {
+      "lat": 1.51467299479878,
+      "lon": 103.65464842953236,
+      "floor": null,
+      "type": null,
+      "name": null
+    },
+    "n_G_0098": {
+      "lat": 1.514378643301111,
+      "lon": 103.65453525139566,
+      "floor": null,
+      "type": null,
+      "name": null
+    },
+    "n_G_0099": {
+      "lat": 1.514322481934151,
+      "lon": 103.65568317530806,
+      "floor": null,
+      "type": null,
+      "name": null
+    },
+    "n_G_0100": {
+      "lat": 1.514298423242468,
+      "lon": 103.65572159654528,
+      "floor": null,
+      "type": null,
+      "name": null
+    },
+    "n_G_0101": {
+      "lat": 1.51390504244748,
+      "lon": 103.65542709356372,
+      "floor": null,
+      "type": null,
+      "name": null
+    }
+  },
+  "edges": [
+    {
+      "id": "e_G_0001",
+      "from": "n_G_0034",
+      "to": "n_G_0037",
+      "weight": 45.684,
+      "floor": null,
+      "accessible": 1.0,
+      "bidir": 1
+    },
+    {
+      "id": "e_G_0001",
+      "from": "n_G_0037",
+      "to": "n_G_0034",
+      "weight": 45.684,
+      "floor": null,
+      "accessible": 1.0,
+      "bidir": 1
+    },
+    {
+      "id": "e_G_0002",
+      "from": "n_G_0034",
+      "to": "n_G_0036",
+      "weight": 3.318,
+      "floor": null,
+      "accessible": 1.0,
+      "bidir": 1
+    },
+    {
+      "id": "e_G_0002",
+      "from": "n_G_0036",
+      "to": "n_G_0034",
+      "weight": 3.318,
+      "floor": null,
+      "accessible": 1.0,
+      "bidir": 1
+    },
+    {
+      "id": "e_G_0003",
+      "from": "n_G_0036",
+      "to": "n_G_0035",
+      "weight": 5.183,
+      "floor": null,
+      "accessible": 1.0,
+      "bidir": 1
+    },
+    {
+      "id": "e_G_0003",
+      "from": "n_G_0035",
+      "to": "n_G_0036",
+      "weight": 5.183,
+      "floor": null,
+      "accessible": 1.0,
+      "bidir": 1
+    },
+    {
+      "id": "e_G_0004",
+      "from": "n_G_0035",
+      "to": "n_G_0038",
+      "weight": 45.743,
+      "floor": null,
+      "accessible": 1.0,
+      "bidir": 1
+    },
+    {
+      "id": "e_G_0004",
+      "from": "n_G_0038",
+      "to": "n_G_0035",
+      "weight": 45.743,
+      "floor": null,
+      "accessible": 1.0,
+      "bidir": 1
+    },
+    {
+      "id": "e_G_0005",
+      "from": "n_G_0037",
+      "to": "n_G_0020",
+      "weight": 10.529,
+      "floor": null,
+      "accessible": 1.0,
+      "bidir": 1
+    },
+    {
+      "id": "e_G_0005",
+      "from": "n_G_0020",
+      "to": "n_G_0037",
+      "weight": 10.529,
+      "floor": null,
+      "accessible": 1.0,
+      "bidir": 1
+    },
+    {
+      "id": "e_G_0006",
+      "from": "n_G_0021",
+      "to": "n_G_0020",
+      "weight": 29.393,
+      "floor": null,
+      "accessible": 1.0,
+      "bidir": 1
+    },
+    {
+      "id": "e_G_0006",
+      "from": "n_G_0020",
+      "to": "n_G_0021",
+      "weight": 29.393,
+      "floor": null,
+      "accessible": 1.0,
+      "bidir": 1
+    },
+    {
+      "id": "e_G_0007",
+      "from": "n_G_0014",
+      "to": "n_G_0020",
+      "weight": 11.103,
+      "floor": null,
+      "accessible": 1.0,
+      "bidir": 1
+    },
+    {
+      "id": "e_G_0007",
+      "from": "n_G_0020",
+      "to": "n_G_0014",
+      "weight": 11.103,
+      "floor": null,
+      "accessible": 1.0,
+      "bidir": 1
+    },
+    {
+      "id": "e_G_0008",
+      "from": "n_G_0037",
+      "to": "n_G_0038",
+      "weight": 8.532,
+      "floor": null,
+      "accessible": 1.0,
+      "bidir": 1
+    },
+    {
+      "id": "e_G_0008",
+      "from": "n_G_0038",
+      "to": "n_G_0037",
+      "weight": 8.532,
+      "floor": null,
+      "accessible": 1.0,
+      "bidir": 1
+    },
+    {
+      "id": "e_G_0009",
+      "from": "n_G_0038",
+      "to": "n_G_0039",
+      "weight": 15.995,
+      "floor": null,
+      "accessible": 1.0,
+      "bidir": 1
+    },
+    {
+      "id": "e_G_0009",
+      "from": "n_G_0039",
+      "to": "n_G_0038",
+      "weight": 15.995,
+      "floor": null,
+      "accessible": 1.0,
+      "bidir": 1
+    },
+    {
+      "id": "e_G_0010",
+      "from": "n_G_0021",
+      "to": "n_G_0039",
+      "weight": 5.047,
+      "floor": null,
+      "accessible": 1.0,
+      "bidir": 1
+    },
+    {
+      "id": "e_G_0010",
+      "from": "n_G_0039",
+      "to": "n_G_0021",
+      "weight": 5.047,
+      "floor": null,
+      "accessible": 1.0,
+      "bidir": 1
+    },
+    {
+      "id": "e_G_0011",
+      "from": "n_G_0039",
+      "to": "n_G_0027",
+      "weight": 6.062,
+      "floor": null,
+      "accessible": 1.0,
+      "bidir": 1
+    },
+    {
+      "id": "e_G_0011",
+      "from": "n_G_0027",
+      "to": "n_G_0039",
+      "weight": 6.062,
+      "floor": null,
+      "accessible": 1.0,
+      "bidir": 1
+    },
+    {
+      "id": "e_G_0012",
+      "from": "n_G_0027",
+      "to": "n_G_0030",
+      "weight": 42.635,
+      "floor": null,
+      "accessible": 1.0,
+      "bidir": 1
+    },
+    {
+      "id": "e_G_0012",
+      "from": "n_G_0030",
+      "to": "n_G_0027",
+      "weight": 42.635,
+      "floor": null,
+      "accessible": 1.0,
+      "bidir": 1
+    },
+    {
+      "id": "e_G_0013",
+      "from": "n_G_0030",
+      "to": "n_G_0031",
+      "weight": 11.576,
+      "floor": null,
+      "accessible": 1.0,
+      "bidir": 1
+    },
+    {
+      "id": "e_G_0013",
+      "from": "n_G_0031",
+      "to": "n_G_0030",
+      "weight": 11.576,
+      "floor": null,
+      "accessible": 1.0,
+      "bidir": 1
+    },
+    {
+      "id": "e_G_0014",
+      "from": "n_G_0031",
+      "to": "n_G_0028",
+      "weight": 12.334,
+      "floor": null,
+      "accessible": 1.0,
+      "bidir": 1
+    },
+    {
+      "id": "e_G_0014",
+      "from": "n_G_0028",
+      "to": "n_G_0031",
+      "weight": 12.334,
+      "floor": null,
+      "accessible": 1.0,
+      "bidir": 1
+    },
+    {
+      "id": "e_G_0015",
+      "from": "n_G_0028",
+      "to": "n_G_0029",
+      "weight": 11.832,
+      "floor": null,
+      "accessible": 1.0,
+      "bidir": 1
+    },
+    {
+      "id": "e_G_0015",
+      "from": "n_G_0029",
+      "to": "n_G_0028",
+      "weight": 11.832,
+      "floor": null,
+      "accessible": 1.0,
+      "bidir": 1
+    },
+    {
+      "id": "e_G_0016",
+      "from": "n_G_0028",
+      "to": "n_G_0026",
+      "weight": 22.184,
+      "floor": null,
+      "accessible": 1.0,
+      "bidir": 1
+    },
+    {
+      "id": "e_G_0016",
+      "from": "n_G_0026",
+      "to": "n_G_0028",
+      "weight": 22.184,
+      "floor": null,
+      "accessible": 1.0,
+      "bidir": 1
+    },
+    {
+      "id": "e_G_0017",
+      "from": "n_G_0026",
+      "to": "n_G_0025",
+      "weight": 12.136,
+      "floor": null,
+      "accessible": 1.0,
+      "bidir": 1
+    },
+    {
+      "id": "e_G_0017",
+      "from": "n_G_0025",
+      "to": "n_G_0026",
+      "weight": 12.136,
+      "floor": null,
+      "accessible": 1.0,
+      "bidir": 1
+    },
+    {
+      "id": "e_G_0018",
+      "from": "n_G_0027",
+      "to": "n_G_0026",
+      "weight": 19.924,
+      "floor": null,
+      "accessible": 1.0,
+      "bidir": 1
+    },
+    {
+      "id": "e_G_0018",
+      "from": "n_G_0026",
+      "to": "n_G_0027",
+      "weight": 19.924,
+      "floor": null,
+      "accessible": 1.0,
+      "bidir": 1
+    },
+    {
+      "id": "e_G_0019",
+      "from": "n_G_0021",
+      "to": "n_G_0022",
+      "weight": 10.71,
+      "floor": null,
+      "accessible": 1.0,
+      "bidir": 1
+    },
+    {
+      "id": "e_G_0019",
+      "from": "n_G_0022",
+      "to": "n_G_0021",
+      "weight": 10.71,
+      "floor": null,
+      "accessible": 1.0,
+      "bidir": 1
+    },
+    {
+      "id": "e_G_0020",
+      "from": "n_G_0022",
+      "to": "n_G_0015",
+      "weight": 11.102,
+      "floor": null,
+      "accessible": 1.0,
+      "bidir": 1
+    },
+    {
+      "id": "e_G_0020",
+      "from": "n_G_0015",
+      "to": "n_G_0022",
+      "weight": 11.102,
+      "floor": null,
+      "accessible": 1.0,
+      "bidir": 1
+    },
+    {
+      "id": "e_G_0021",
+      "from": "n_G_0022",
+      "to": "n_G_0023",
+      "weight": 10.714,
+      "floor": null,
+      "accessible": 1.0,
+      "bidir": 1
+    },
+    {
+      "id": "e_G_0021",
+      "from": "n_G_0023",
+      "to": "n_G_0022",
+      "weight": 10.714,
+      "floor": null,
+      "accessible": 1.0,
+      "bidir": 1
+    },
+    {
+      "id": "e_G_0022",
+      "from": "n_G_0023",
+      "to": "n_G_0024",
+      "weight": 11.463,
+      "floor": null,
+      "accessible": 1.0,
+      "bidir": 1
+    },
+    {
+      "id": "e_G_0022",
+      "from": "n_G_0024",
+      "to": "n_G_0023",
+      "weight": 11.463,
+      "floor": null,
+      "accessible": 1.0,
+      "bidir": 1
+    },
+    {
+      "id": "e_G_0023",
+      "from": "n_G_0024",
+      "to": "n_G_0041",
+      "weight": 20.864,
+      "floor": null,
+      "accessible": 1.0,
+      "bidir": 1
+    },
+    {
+      "id": "e_G_0023",
+      "from": "n_G_0041",
+      "to": "n_G_0024",
+      "weight": 20.864,
+      "floor": null,
+      "accessible": 1.0,
+      "bidir": 1
+    },
+    {
+      "id": "e_G_0024",
+      "from": "n_G_0023",
+      "to": "n_G_0042",
+      "weight": 20.818,
+      "floor": null,
+      "accessible": 1.0,
+      "bidir": 1
+    },
+    {
+      "id": "e_G_0024",
+      "from": "n_G_0042",
+      "to": "n_G_0023",
+      "weight": 20.818,
+      "floor": null,
+      "accessible": 1.0,
+      "bidir": 1
+    },
+    {
+      "id": "e_G_0025",
+      "from": "n_G_0041",
+      "to": "n_G_0042",
+      "weight": 11.548,
+      "floor": null,
+      "accessible": 1.0,
+      "bidir": 1
+    },
+    {
+      "id": "e_G_0025",
+      "from": "n_G_0042",
+      "to": "n_G_0041",
+      "weight": 11.548,
+      "floor": null,
+      "accessible": 1.0,
+      "bidir": 1
+    },
+    {
+      "id": "e_G_0026",
+      "from": "n_G_0041",
+      "to": "n_G_0040",
+      "weight": 7.135,
+      "floor": null,
+      "accessible": 1.0,
+      "bidir": 1
+    },
+    {
+      "id": "e_G_0026",
+      "from": "n_G_0040",
+      "to": "n_G_0041",
+      "weight": 7.135,
+      "floor": null,
+      "accessible": 1.0,
+      "bidir": 1
+    },
+    {
+      "id": "e_G_0027",
+      "from": "n_G_0024",
+      "to": "n_G_0098",
+      "weight": 5.728,
+      "floor": null,
+      "accessible": 1.0,
+      "bidir": 1
+    },
+    {
+      "id": "e_G_0027",
+      "from": "n_G_0098",
+      "to": "n_G_0024",
+      "weight": 5.728,
+      "floor": null,
+      "accessible": 1.0,
+      "bidir": 1
+    },
+    {
+      "id": "e_G_0028",
+      "from": "n_G_0025",
+      "to": "n_G_0029",
+      "weight": 16.247,
+      "floor": null,
+      "accessible": 1.0,
+      "bidir": 1
+    },
+    {
+      "id": "e_G_0028",
+      "from": "n_G_0029",
+      "to": "n_G_0025",
+      "weight": 16.247,
+      "floor": null,
+      "accessible": 1.0,
+      "bidir": 1
+    },
+    {
+      "id": "e_G_0029",
+      "from": "n_G_0029",
+      "to": "n_G_0032",
+      "weight": 14.606,
+      "floor": null,
+      "accessible": 1.0,
+      "bidir": 1
+    },
+    {
+      "id": "e_G_0029",
+      "from": "n_G_0032",
+      "to": "n_G_0029",
+      "weight": 14.606,
+      "floor": null,
+      "accessible": 1.0,
+      "bidir": 1
+    },
+    {
+      "id": "e_G_0030",
+      "from": "n_G_0031",
+      "to": "n_G_0032",
+      "weight": 11.624,
+      "floor": null,
+      "accessible": 1.0,
+      "bidir": 1
+    },
+    {
+      "id": "e_G_0030",
+      "from": "n_G_0032",
+      "to": "n_G_0031",
+      "weight": 11.624,
+      "floor": null,
+      "accessible": 1.0,
+      "bidir": 1
+    },
+    {
+      "id": "e_G_0031",
+      "from": "n_G_0032",
+      "to": "n_G_0046",
+      "weight": 18.307,
+      "floor": null,
+      "accessible": 1.0,
+      "bidir": 1
+    },
+    {
+      "id": "e_G_0031",
+      "from": "n_G_0046",
+      "to": "n_G_0032",
+      "weight": 18.307,
+      "floor": null,
+      "accessible": 1.0,
+      "bidir": 1
+    },
+    {
+      "id": "e_G_0032",
+      "from": "n_G_0046",
+      "to": "n_G_0045",
+      "weight": 10.753,
+      "floor": null,
+      "accessible": 1.0,
+      "bidir": 1
+    },
+    {
+      "id": "e_G_0032",
+      "from": "n_G_0045",
+      "to": "n_G_0046",
+      "weight": 10.753,
+      "floor": null,
+      "accessible": 1.0,
+      "bidir": 1
+    },
+    {
+      "id": "e_G_0033",
+      "from": "n_G_0045",
+      "to": "n_G_0044",
+      "weight": 4.251,
+      "floor": null,
+      "accessible": 1.0,
+      "bidir": 1
+    },
+    {
+      "id": "e_G_0033",
+      "from": "n_G_0044",
+      "to": "n_G_0045",
+      "weight": 4.251,
+      "floor": null,
+      "accessible": 1.0,
+      "bidir": 1
+    },
+    {
+      "id": "e_G_0034",
+      "from": "n_G_0046",
+      "to": "n_G_0043",
+      "weight": 35.052,
+      "floor": null,
+      "accessible": 1.0,
+      "bidir": 1
+    },
+    {
+      "id": "e_G_0034",
+      "from": "n_G_0043",
+      "to": "n_G_0046",
+      "weight": 35.052,
+      "floor": null,
+      "accessible": 1.0,
+      "bidir": 1
+    },
+    {
+      "id": "e_G_0035",
+      "from": "n_G_0044",
+      "to": "n_G_0043",
+      "weight": 19.985,
+      "floor": null,
+      "accessible": 1.0,
+      "bidir": 1
+    },
+    {
+      "id": "e_G_0035",
+      "from": "n_G_0043",
+      "to": "n_G_0044",
+      "weight": 19.985,
+      "floor": null,
+      "accessible": 1.0,
+      "bidir": 1
+    },
+    {
+      "id": "e_G_0036",
+      "from": "n_G_0043",
+      "to": "n_G_0040",
+      "weight": 16.898,
+      "floor": null,
+      "accessible": 1.0,
+      "bidir": 1
+    },
+    {
+      "id": "e_G_0036",
+      "from": "n_G_0040",
+      "to": "n_G_0043",
+      "weight": 16.898,
+      "floor": null,
+      "accessible": 1.0,
+      "bidir": 1
+    },
+    {
+      "id": "e_G_0037",
+      "from": "n_G_0045",
+      "to": "n_G_0047",
+      "weight": 36.558,
+      "floor": null,
+      "accessible": 1.0,
+      "bidir": 1
+    },
+    {
+      "id": "e_G_0037",
+      "from": "n_G_0047",
+      "to": "n_G_0045",
+      "weight": 36.558,
+      "floor": null,
+      "accessible": 1.0,
+      "bidir": 1
+    },
+    {
+      "id": "e_G_0038",
+      "from": "n_G_0016",
+      "to": "n_G_0047",
+      "weight": 3.083,
+      "floor": null,
+      "accessible": 1.0,
+      "bidir": 1
+    },
+    {
+      "id": "e_G_0038",
+      "from": "n_G_0047",
+      "to": "n_G_0016",
+      "weight": 3.083,
+      "floor": null,
+      "accessible": 1.0,
+      "bidir": 1
+    },
+    {
+      "id": "e_G_0039",
+      "from": "n_G_0047",
+      "to": "n_G_0048",
+      "weight": 20.324,
+      "floor": null,
+      "accessible": 1.0,
+      "bidir": 1
+    },
+    {
+      "id": "e_G_0039",
+      "from": "n_G_0048",
+      "to": "n_G_0047",
+      "weight": 20.324,
+      "floor": null,
+      "accessible": 1.0,
+      "bidir": 1
+    },
+    {
+      "id": "e_G_0040",
+      "from": "n_G_0048",
+      "to": "n_G_0049",
+      "weight": 11.523,
+      "floor": null,
+      "accessible": 1.0,
+      "bidir": 1
+    },
+    {
+      "id": "e_G_0040",
+      "from": "n_G_0049",
+      "to": "n_G_0048",
+      "weight": 11.523,
+      "floor": null,
+      "accessible": 1.0,
+      "bidir": 1
+    },
+    {
+      "id": "e_G_0041",
+      "from": "n_G_0093",
+      "to": "n_G_0050",
+      "weight": 9.138,
+      "floor": null,
+      "accessible": 1.0,
+      "bidir": 1
+    },
+    {
+      "id": "e_G_0041",
+      "from": "n_G_0050",
+      "to": "n_G_0093",
+      "weight": 9.138,
+      "floor": null,
+      "accessible": 1.0,
+      "bidir": 1
+    },
+    {
+      "id": "e_G_0042",
+      "from": "n_G_0101",
+      "to": "n_G_0051",
+      "weight": 28.928,
+      "floor": null,
+      "accessible": 1.0,
+      "bidir": 1
+    },
+    {
+      "id": "e_G_0042",
+      "from": "n_G_0051",
+      "to": "n_G_0101",
+      "weight": 28.928,
+      "floor": null,
+      "accessible": 1.0,
+      "bidir": 1
+    },
+    {
+      "id": "e_G_0043",
+      "from": "n_G_0094",
+      "to": "n_G_0053",
+      "weight": 24.079,
+      "floor": null,
+      "accessible": 1.0,
+      "bidir": 1
+    },
+    {
+      "id": "e_G_0043",
+      "from": "n_G_0053",
+      "to": "n_G_0094",
+      "weight": 24.079,
+      "floor": null,
+      "accessible": 1.0,
+      "bidir": 1
+    },
+    {
+      "id": "e_G_0044",
+      "from": "n_G_0051",
+      "to": "n_G_0050",
+      "weight": 11.374,
+      "floor": null,
+      "accessible": 1.0,
+      "bidir": 1
+    },
+    {
+      "id": "e_G_0044",
+      "from": "n_G_0050",
+      "to": "n_G_0051",
+      "weight": 11.374,
+      "floor": null,
+      "accessible": 1.0,
+      "bidir": 1
+    },
+    {
+      "id": "e_G_0045",
+      "from": "n_G_0050",
+      "to": "n_G_0052",
+      "weight": 12.307,
+      "floor": null,
+      "accessible": 1.0,
+      "bidir": 1
+    },
+    {
+      "id": "e_G_0045",
+      "from": "n_G_0052",
+      "to": "n_G_0050",
+      "weight": 12.307,
+      "floor": null,
+      "accessible": 1.0,
+      "bidir": 1
+    },
+    {
+      "id": "e_G_0046",
+      "from": "n_G_0052",
+      "to": "n_G_0019",
+      "weight": 8.669,
+      "floor": null,
+      "accessible": 1.0,
+      "bidir": 1
+    },
+    {
+      "id": "e_G_0046",
+      "from": "n_G_0019",
+      "to": "n_G_0052",
+      "weight": 8.669,
+      "floor": null,
+      "accessible": 1.0,
+      "bidir": 1
+    },
+    {
+      "id": "e_G_0047",
+      "from": "n_G_0049",
+      "to": "n_G_0054",
+      "weight": 19.351,
+      "floor": null,
+      "accessible": 1.0,
+      "bidir": 1
+    },
+    {
+      "id": "e_G_0047",
+      "from": "n_G_0054",
+      "to": "n_G_0049",
+      "weight": 19.351,
+      "floor": null,
+      "accessible": 1.0,
+      "bidir": 1
+    },
+    {
+      "id": "e_G_0048",
+      "from": "n_G_0054",
+      "to": "n_G_0017",
+      "weight": 7.159,
+      "floor": null,
+      "accessible": 1.0,
+      "bidir": 1
+    },
+    {
+      "id": "e_G_0048",
+      "from": "n_G_0017",
+      "to": "n_G_0054",
+      "weight": 7.159,
+      "floor": null,
+      "accessible": 1.0,
+      "bidir": 1
+    },
+    {
+      "id": "e_G_0049",
+      "from": "n_G_0054",
+      "to": "n_G_0089",
+      "weight": 21.599,
+      "floor": null,
+      "accessible": 1.0,
+      "bidir": 1
+    },
+    {
+      "id": "e_G_0049",
+      "from": "n_G_0089",
+      "to": "n_G_0054",
+      "weight": 21.599,
+      "floor": null,
+      "accessible": 1.0,
+      "bidir": 1
+    },
+    {
+      "id": "e_G_0050",
+      "from": "n_G_0089",
+      "to": "n_G_0053",
+      "weight": 49.853,
+      "floor": null,
+      "accessible": 1.0,
+      "bidir": 1
+    },
+    {
+      "id": "e_G_0050",
+      "from": "n_G_0053",
+      "to": "n_G_0089",
+      "weight": 49.853,
+      "floor": null,
+      "accessible": 1.0,
+      "bidir": 1
+    },
+    {
+      "id": "e_G_0051",
+      "from": "n_G_0089",
+      "to": "n_G_0055",
+      "weight": 2.468,
+      "floor": null,
+      "accessible": 1.0,
+      "bidir": 1
+    },
+    {
+      "id": "e_G_0051",
+      "from": "n_G_0055",
+      "to": "n_G_0089",
+      "weight": 2.468,
+      "floor": null,
+      "accessible": 1.0,
+      "bidir": 1
+    },
+    {
+      "id": "e_G_0052",
+      "from": "n_G_0089",
+      "to": "n_G_0057",
+      "weight": 2.223,
+      "floor": null,
+      "accessible": 1.0,
+      "bidir": 1
+    },
+    {
+      "id": "e_G_0052",
+      "from": "n_G_0057",
+      "to": "n_G_0089",
+      "weight": 2.223,
+      "floor": null,
+      "accessible": 1.0,
+      "bidir": 1
+    },
+    {
+      "id": "e_G_0053",
+      "from": "n_G_0089",
+      "to": "n_G_0056",
+      "weight": 3.102,
+      "floor": null,
+      "accessible": 1.0,
+      "bidir": 1
+    },
+    {
+      "id": "e_G_0053",
+      "from": "n_G_0056",
+      "to": "n_G_0089",
+      "weight": 3.102,
+      "floor": null,
+      "accessible": 1.0,
+      "bidir": 1
+    },
+    {
+      "id": "e_G_0054",
+      "from": "n_G_0021",
+      "to": "n_G_0061",
+      "weight": 11.846,
+      "floor": null,
+      "accessible": 1.0,
+      "bidir": 1
+    },
+    {
+      "id": "e_G_0054",
+      "from": "n_G_0061",
+      "to": "n_G_0021",
+      "weight": 11.846,
+      "floor": null,
+      "accessible": 1.0,
+      "bidir": 1
+    },
+    {
+      "id": "e_G_0055",
+      "from": "n_G_0021",
+      "to": "n_G_0062",
+      "weight": 13.394,
+      "floor": null,
+      "accessible": 1.0,
+      "bidir": 1
+    },
+    {
+      "id": "e_G_0055",
+      "from": "n_G_0062",
+      "to": "n_G_0021",
+      "weight": 13.394,
+      "floor": null,
+      "accessible": 1.0,
+      "bidir": 1
+    },
+    {
+      "id": "e_G_0056",
+      "from": "n_G_0021",
+      "to": "n_G_0063",
+      "weight": 12.763,
+      "floor": null,
+      "accessible": 1.0,
+      "bidir": 1
+    },
+    {
+      "id": "e_G_0056",
+      "from": "n_G_0063",
+      "to": "n_G_0021",
+      "weight": 12.763,
+      "floor": null,
+      "accessible": 1.0,
+      "bidir": 1
+    },
+    {
+      "id": "e_G_0057",
+      "from": "n_G_0021",
+      "to": "n_G_0064",
+      "weight": 8.711,
+      "floor": null,
+      "accessible": 1.0,
+      "bidir": 1
+    },
+    {
+      "id": "e_G_0057",
+      "from": "n_G_0064",
+      "to": "n_G_0021",
+      "weight": 8.711,
+      "floor": null,
+      "accessible": 1.0,
+      "bidir": 1
+    },
+    {
+      "id": "e_G_0058",
+      "from": "n_G_0044",
+      "to": "n_G_0060",
+      "weight": 16.466,
+      "floor": null,
+      "accessible": 1.0,
+      "bidir": 1
+    },
+    {
+      "id": "e_G_0058",
+      "from": "n_G_0060",
+      "to": "n_G_0044",
+      "weight": 16.466,
+      "floor": null,
+      "accessible": 1.0,
+      "bidir": 1
+    },
+    {
+      "id": "e_G_0059",
+      "from": "n_G_0044",
+      "to": "n_G_0058",
+      "weight": 14.287,
+      "floor": null,
+      "accessible": 1.0,
+      "bidir": 1
+    },
+    {
+      "id": "e_G_0059",
+      "from": "n_G_0058",
+      "to": "n_G_0044",
+      "weight": 14.287,
+      "floor": null,
+      "accessible": 1.0,
+      "bidir": 1
+    },
+    {
+      "id": "e_G_0060",
+      "from": "n_G_0044",
+      "to": "n_G_0059",
+      "weight": 15.546,
+      "floor": null,
+      "accessible": 1.0,
+      "bidir": 1
+    },
+    {
+      "id": "e_G_0060",
+      "from": "n_G_0059",
+      "to": "n_G_0044",
+      "weight": 15.546,
+      "floor": null,
+      "accessible": 1.0,
+      "bidir": 1
+    },
+    {
+      "id": "e_G_0061",
+      "from": "n_G_0030",
+      "to": "n_G_0013",
+      "weight": 7.163,
+      "floor": null,
+      "accessible": 1.0,
+      "bidir": 1
+    },
+    {
+      "id": "e_G_0061",
+      "from": "n_G_0013",
+      "to": "n_G_0030",
+      "weight": 7.163,
+      "floor": null,
+      "accessible": 1.0,
+      "bidir": 1
+    },
+    {
+      "id": "e_G_0062",
+      "from": "n_G_0033",
+      "to": "n_G_0013",
+      "weight": 23.82,
+      "floor": null,
+      "accessible": 1.0,
+      "bidir": 1
+    },
+    {
+      "id": "e_G_0062",
+      "from": "n_G_0013",
+      "to": "n_G_0033",
+      "weight": 23.82,
+      "floor": null,
+      "accessible": 1.0,
+      "bidir": 1
+    },
+    {
+      "id": "e_G_0063",
+      "from": "n_G_0030",
+      "to": "n_G_0033",
+      "weight": 27.944,
+      "floor": null,
+      "accessible": 1.0,
+      "bidir": 1
+    },
+    {
+      "id": "e_G_0063",
+      "from": "n_G_0033",
+      "to": "n_G_0030",
+      "weight": 27.944,
+      "floor": null,
+      "accessible": 1.0,
+      "bidir": 1
+    },
+    {
+      "id": "e_G_0064",
+      "from": "n_G_0033",
+      "to": "n_G_0034",
+      "weight": 29.919,
+      "floor": null,
+      "accessible": 1.0,
+      "bidir": 1
+    },
+    {
+      "id": "e_G_0064",
+      "from": "n_G_0034",
+      "to": "n_G_0033",
+      "weight": 29.919,
+      "floor": null,
+      "accessible": 1.0,
+      "bidir": 1
+    },
+    {
+      "id": "e_G_0065",
+      "from": "n_G_0033",
+      "to": "n_G_0036",
+      "weight": 15.592,
+      "floor": null,
+      "accessible": 1.0,
+      "bidir": 1
+    },
+    {
+      "id": "e_G_0065",
+      "from": "n_G_0036",
+      "to": "n_G_0033",
+      "weight": 15.592,
+      "floor": null,
+      "accessible": 1.0,
+      "bidir": 1
+    },
+    {
+      "id": "e_G_0066",
+      "from": "n_G_0042",
+      "to": "n_G_0097",
+      "weight": 12.814,
+      "floor": null,
+      "accessible": 1.0,
+      "bidir": 1
+    },
+    {
+      "id": "e_G_0066",
+      "from": "n_G_0097",
+      "to": "n_G_0042",
+      "weight": 12.814,
+      "floor": null,
+      "accessible": 1.0,
+      "bidir": 1
+    },
+    {
+      "id": "e_G_0067",
+      "from": "n_G_0040",
+      "to": "n_G_0097",
+      "weight": 14.575,
+      "floor": null,
+      "accessible": 1.0,
+      "bidir": 1
+    },
+    {
+      "id": "e_G_0067",
+      "from": "n_G_0097",
+      "to": "n_G_0040",
+      "weight": 14.575,
+      "floor": null,
+      "accessible": 1.0,
+      "bidir": 1
+    },
+    {
+      "id": "e_G_0068",
+      "from": "n_G_0097",
+      "to": "n_G_0012",
+      "weight": 5.078,
+      "floor": null,
+      "accessible": 1.0,
+      "bidir": 1
+    },
+    {
+      "id": "e_G_0068",
+      "from": "n_G_0012",
+      "to": "n_G_0097",
+      "weight": 5.078,
+      "floor": null,
+      "accessible": 1.0,
+      "bidir": 1
+    },
+    {
+      "id": "e_G_0069",
+      "from": "n_G_0098",
+      "to": "n_G_0011",
+      "weight": 2.145,
+      "floor": null,
+      "accessible": 1.0,
+      "bidir": 1
+    },
+    {
+      "id": "e_G_0069",
+      "from": "n_G_0011",
+      "to": "n_G_0098",
+      "weight": 2.145,
+      "floor": null,
+      "accessible": 1.0,
+      "bidir": 1
+    },
+    {
+      "id": "e_G_0070",
+      "from": "n_G_0095",
+      "to": "n_G_0001",
+      "weight": 1.713,
+      "floor": null,
+      "accessible": 1.0,
+      "bidir": 1
+    },
+    {
+      "id": "e_G_0070",
+      "from": "n_G_0001",
+      "to": "n_G_0095",
+      "weight": 1.713,
+      "floor": null,
+      "accessible": 1.0,
+      "bidir": 1
+    },
+    {
+      "id": "e_G_0071",
+      "from": "n_G_0009",
+      "to": "n_G_0090",
+      "weight": 1.214,
+      "floor": null,
+      "accessible": 1.0,
+      "bidir": 1
+    },
+    {
+      "id": "e_G_0071",
+      "from": "n_G_0090",
+      "to": "n_G_0009",
+      "weight": 1.214,
+      "floor": null,
+      "accessible": 1.0,
+      "bidir": 1
+    },
+    {
+      "id": "e_G_0072",
+      "from": "n_G_0008",
+      "to": "n_G_0091",
+      "weight": 1.224,
+      "floor": null,
+      "accessible": 1.0,
+      "bidir": 1
+    },
+    {
+      "id": "e_G_0072",
+      "from": "n_G_0091",
+      "to": "n_G_0008",
+      "weight": 1.224,
+      "floor": null,
+      "accessible": 1.0,
+      "bidir": 1
+    },
+    {
+      "id": "e_G_0073",
+      "from": "n_G_0007",
+      "to": "n_G_0092",
+      "weight": 1.232,
+      "floor": null,
+      "accessible": 1.0,
+      "bidir": 1
+    },
+    {
+      "id": "e_G_0073",
+      "from": "n_G_0092",
+      "to": "n_G_0007",
+      "weight": 1.232,
+      "floor": null,
+      "accessible": 1.0,
+      "bidir": 1
+    },
+    {
+      "id": "e_G_0074",
+      "from": "n_G_0006",
+      "to": "n_G_0093",
+      "weight": 1.242,
+      "floor": null,
+      "accessible": 1.0,
+      "bidir": 1
+    },
+    {
+      "id": "e_G_0074",
+      "from": "n_G_0093",
+      "to": "n_G_0006",
+      "weight": 1.242,
+      "floor": null,
+      "accessible": 1.0,
+      "bidir": 1
+    },
+    {
+      "id": "e_G_0075",
+      "from": "n_G_0052",
+      "to": "n_G_0099",
+      "weight": 9.408,
+      "floor": null,
+      "accessible": 1.0,
+      "bidir": 1
+    },
+    {
+      "id": "e_G_0075",
+      "from": "n_G_0099",
+      "to": "n_G_0052",
+      "weight": 9.408,
+      "floor": null,
+      "accessible": 1.0,
+      "bidir": 1
+    },
+    {
+      "id": "e_G_0076",
+      "from": "n_G_0053",
+      "to": "n_G_0100",
+      "weight": 6.077,
+      "floor": null,
+      "accessible": 1.0,
+      "bidir": 1
+    },
+    {
+      "id": "e_G_0076",
+      "from": "n_G_0100",
+      "to": "n_G_0053",
+      "weight": 6.077,
+      "floor": null,
+      "accessible": 1.0,
+      "bidir": 1
+    },
+    {
+      "id": "e_G_0077",
+      "from": "n_G_0100",
+      "to": "n_G_0004",
+      "weight": 4.258,
+      "floor": null,
+      "accessible": 1.0,
+      "bidir": 1
+    },
+    {
+      "id": "e_G_0077",
+      "from": "n_G_0004",
+      "to": "n_G_0100",
+      "weight": 4.258,
+      "floor": null,
+      "accessible": 1.0,
+      "bidir": 1
+    },
+    {
+      "id": "e_G_0078",
+      "from": "n_G_0099",
+      "to": "n_G_0005",
+      "weight": 3.063,
+      "floor": null,
+      "accessible": 1.0,
+      "bidir": 1
+    },
+    {
+      "id": "e_G_0078",
+      "from": "n_G_0005",
+      "to": "n_G_0099",
+      "weight": 3.063,
+      "floor": null,
+      "accessible": 1.0,
+      "bidir": 1
+    },
+    {
+      "id": "e_G_0079",
+      "from": "n_G_0099",
+      "to": "n_G_0100",
+      "weight": 5.902,
+      "floor": null,
+      "accessible": 1.0,
+      "bidir": 1
+    },
+    {
+      "id": "e_G_0079",
+      "from": "n_G_0100",
+      "to": "n_G_0099",
+      "weight": 5.902,
+      "floor": null,
+      "accessible": 1.0,
+      "bidir": 1
+    },
+    {
+      "id": "e_G_0080",
+      "from": "n_G_0048",
+      "to": "n_G_0090",
+      "weight": 10.758,
+      "floor": null,
+      "accessible": 1.0,
+      "bidir": 1
+    },
+    {
+      "id": "e_G_0080",
+      "from": "n_G_0090",
+      "to": "n_G_0048",
+      "weight": 10.758,
+      "floor": null,
+      "accessible": 1.0,
+      "bidir": 1
+    },
+    {
+      "id": "e_G_0081",
+      "from": "n_G_0090",
+      "to": "n_G_0091",
+      "weight": 5.345,
+      "floor": null,
+      "accessible": 1.0,
+      "bidir": 1
+    },
+    {
+      "id": "e_G_0081",
+      "from": "n_G_0091",
+      "to": "n_G_0090",
+      "weight": 5.345,
+      "floor": null,
+      "accessible": 1.0,
+      "bidir": 1
+    },
+    {
+      "id": "e_G_0082",
+      "from": "n_G_0091",
+      "to": "n_G_0092",
+      "weight": 4.008,
+      "floor": null,
+      "accessible": 1.0,
+      "bidir": 1
+    },
+    {
+      "id": "e_G_0082",
+      "from": "n_G_0092",
+      "to": "n_G_0091",
+      "weight": 4.008,
+      "floor": null,
+      "accessible": 1.0,
+      "bidir": 1
+    },
+    {
+      "id": "e_G_0083",
+      "from": "n_G_0092",
+      "to": "n_G_0093",
+      "weight": 5.83,
+      "floor": null,
+      "accessible": 1.0,
+      "bidir": 1
+    },
+    {
+      "id": "e_G_0083",
+      "from": "n_G_0093",
+      "to": "n_G_0092",
+      "weight": 5.83,
+      "floor": null,
+      "accessible": 1.0,
+      "bidir": 1
+    },
+    {
+      "id": "e_G_0084",
+      "from": "n_G_0051",
+      "to": "n_G_0094",
+      "weight": 1.674,
+      "floor": null,
+      "accessible": 1.0,
+      "bidir": 1
+    },
+    {
+      "id": "e_G_0084",
+      "from": "n_G_0094",
+      "to": "n_G_0051",
+      "weight": 1.674,
+      "floor": null,
+      "accessible": 1.0,
+      "bidir": 1
+    },
+    {
+      "id": "e_G_0085",
+      "from": "n_G_0003",
+      "to": "n_G_0094",
+      "weight": 0.885,
+      "floor": null,
+      "accessible": 1.0,
+      "bidir": 1
+    },
+    {
+      "id": "e_G_0085",
+      "from": "n_G_0094",
+      "to": "n_G_0003",
+      "weight": 0.885,
+      "floor": null,
+      "accessible": 1.0,
+      "bidir": 1
+    },
+    {
+      "id": "e_G_0086",
+      "from": "n_G_0101",
+      "to": "n_G_0002",
+      "weight": 2.383,
+      "floor": null,
+      "accessible": 1.0,
+      "bidir": 1
+    },
+    {
+      "id": "e_G_0086",
+      "from": "n_G_0002",
+      "to": "n_G_0101",
+      "weight": 2.383,
+      "floor": null,
+      "accessible": 1.0,
+      "bidir": 1
+    },
+    {
+      "id": "e_G_0087",
+      "from": "n_G_0049",
+      "to": "n_G_0101",
+      "weight": 3.706,
+      "floor": null,
+      "accessible": 1.0,
+      "bidir": 1
+    },
+    {
+      "id": "e_G_0087",
+      "from": "n_G_0101",
+      "to": "n_G_0049",
+      "weight": 3.706,
+      "floor": null,
+      "accessible": 1.0,
+      "bidir": 1
+    },
+    {
+      "id": "e_G_0027",
+      "from": "n_G_0098",
+      "to": "n_G_0025",
+      "weight": 5.44,
+      "floor": null,
+      "accessible": 1.0,
+      "bidir": 1
+    },
+    {
+      "id": "e_G_0027",
+      "from": "n_G_0025",
+      "to": "n_G_0098",
+      "weight": 5.44,
+      "floor": null,
+      "accessible": 1.0,
+      "bidir": 1
+    }
+  ]
+}

@@ -4,44 +4,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <title>Tasek Mall Navigator</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
     <link rel="stylesheet" href="style.css">
 
-    <!-- Leaflet JS / CSS -->
-    <script src="https://unpkg.com/leaflet@1.9/dist/leaflet-src.js"></script>
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9/dist/leaflet.css">
-
-    <!-- Leaflet-Rotate -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script src="https://unpkg.com/leaflet-rotate@0.2.8/dist/leaflet-rotate-src.js"></script>
-
-    <!-- include some miscellaneous -->
-    <script src="https://unpkg.com/leaflet-rotate@0.2.8/misc/route.js"></script>
-    <script src="https://unpkg.com/leaflet-rotate@0.2.8/misc/places.js"></script>
-    <script src="https://unpkg.com/leaflet-rotate@0.2.8/misc/loremIpsum.js"></script>
-    <script src="https://unpkg.com/leaflet-rotate@0.2.8/lib/debug.js"></script>
-
-    <!-- Polyline decorator  -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.polylineDecorator/1.7.0/leaflet.polyline-decorator.min.js"></script>
-<script src="https://unpkg.com/leaflet-polylinedecorator/dist/leaflet.polylineDecorator.js"></script>
-
- 
-
-
+    <script src="https://unpkg.com/leaflet-polylinedecorator/dist/leaflet.polylineDecorator.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jsqr@1.4.0/dist/jsQR.min.js"></script>
 </head>
 
 <body>
-    <label for="floorLevel">Choose Floor:</label>
-    <select name="floorLevel" id="floorLevel">
-        <option value="1">Level 1</option>
-        <option value="2">Level 2</option>
-        <option value="3">Level 3</option>
-    </select>
+    <div id="nav-panel">
+        <h2 id="nav-title">Tasek Mall</h2>
+
+        <div class="nav-row">
+            <label for="floorLevel">Floor</label>
+            <select id="floorLevel">
+                <option value="G">Ground</option>
+                <option value="1">Level 1</option>
+                <option value="2">Level 2</option>
+                <option value="3">Level 3</option>
+                <option value="4">Level 4</option>
+                <option value="5">Level 5</option>
+            </select>
+        </div>
+
+        <div class="nav-row autocomplete-wrap">
+            <label for="fromInput">From</label>
+            <div class="input-with-btn">
+                <input type="text" id="fromInput" placeholder="Current location..." autocomplete="off">
+                <button id="qrBtn" title="Scan QR code to set location">&#128247;</button>
+            </div>
+            <ul id="fromSuggestions" class="suggestions hidden"></ul>
+        </div>
+
+        <div class="nav-row autocomplete-wrap">
+            <label for="toInput">To</label>
+            <input type="text" id="toInput" placeholder="Destination..." autocomplete="off">
+            <ul id="toSuggestions" class="suggestions hidden"></ul>
+        </div>
+
+        <div class="nav-actions">
+            <button id="navigateBtn" disabled>Navigate</button>
+            <button id="clearBtn">Clear</button>
+        </div>
+
+        <div id="routeInfo" class="route-info hidden"></div>
+        <ol id="routeSteps" class="route-steps hidden"></ol>
+
+        <div id="legend" class="legend"></div>
+    </div>
+
     <div id="map"></div>
 
-   <!-- local script files  -->
-    <!-- <script src="Tasek_Level2_Test01.js"></script> -->
+    <!-- QR scanner overlay -->
+    <div id="qrOverlay" class="hidden">
+        <div id="qrModal">
+            <p>Point camera at a QR code on a map sign</p>
+            <video id="qrVideo" playsinline></video>
+            <canvas id="qrCanvas" hidden></canvas>
+            <button id="qrClose">Cancel</button>
+        </div>
+    </div>
+
     <script src="script.js"></script>
 </body>
 

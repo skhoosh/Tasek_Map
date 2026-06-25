@@ -1,5 +1,194 @@
-    #map {
-        height: 75vh;
-        /* Adjust as needed */
-        width: 75vw;
-    }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    display: flex;
+    height: 100vh;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-size: 14px;
+    color: #1f2937;
+}
+
+/* ── Side panel ─────────────────────────────────────────────────────────────── */
+#nav-panel {
+    width: 290px;
+    min-width: 250px;
+    background: #fff;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.12);
+    z-index: 1000;
+    overflow-y: auto;
+}
+
+#nav-title { font-size: 18px; font-weight: 700; color: #1a1a2e; }
+
+.nav-row { display: flex; flex-direction: column; gap: 5px; position: relative; }
+
+.nav-row label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #6b7280;
+    font-weight: 600;
+}
+
+.nav-row input,
+.nav-row select {
+    width: 100%;
+    padding: 8px 10px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.15s;
+    background: #fff;
+}
+
+.nav-row input:focus,
+.nav-row select:focus {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.15);
+}
+
+.input-with-btn { display: flex; gap: 6px; }
+.input-with-btn input { flex: 1; }
+
+.input-with-btn button {
+    padding: 8px 10px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    background: #f9fafb;
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 1;
+}
+.input-with-btn button:hover { background: #e5e7eb; }
+
+/* ── Autocomplete ───────────────────────────────────────────────────────────── */
+.autocomplete-wrap { position: relative; }
+
+.suggestions {
+    position: absolute;
+    top: calc(100% + 2px);
+    left: 0; right: 0;
+    background: #fff;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    max-height: 220px;
+    overflow-y: auto;
+    z-index: 2000;
+    list-style: none;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.suggestions li {
+    padding: 8px 12px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+}
+.suggestions li:hover, .suggestions li.active { background: #eff6ff; }
+
+.suggestion-floor {
+    font-size: 10px;
+    color: #6b7280;
+    background: #f3f4f6;
+    padding: 2px 6px;
+    border-radius: 3px;
+    flex-shrink: 0;
+}
+
+/* ── Buttons ────────────────────────────────────────────────────────────────── */
+.nav-actions { display: flex; gap: 8px; }
+
+.nav-actions button {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+}
+#navigateBtn { background: #3b82f6; color: #fff; }
+#navigateBtn:disabled { opacity: 0.4; cursor: not-allowed; }
+#navigateBtn:not(:disabled):hover { background: #2563eb; }
+#clearBtn { background: #f3f4f6; color: #374151; }
+#clearBtn:hover { background: #e5e7eb; }
+
+/* ── Route info + steps ─────────────────────────────────────────────────────── */
+.route-info {
+    background: #f0fdf4;
+    border: 1px solid #86efac;
+    border-radius: 6px;
+    padding: 10px 12px;
+    font-size: 13px;
+    color: #166534;
+    line-height: 1.5;
+}
+
+.route-steps { list-style: none; display: flex; flex-direction: column; gap: 2px; }
+
+.route-steps li {
+    padding: 8px 10px;
+    border-radius: 6px;
+    font-size: 13px;
+    cursor: pointer;
+    display: flex;
+    gap: 8px;
+    align-items: flex-start;
+    border: 1px solid transparent;
+}
+.route-steps li:hover { background: #f3f4f6; }
+.route-steps li.active { background: #eff6ff; border-color: #bfdbfe; }
+
+.step-icon { flex-shrink: 0; width: 18px; text-align: center; }
+.step-floor { font-size: 10px; color: #6b7280; font-weight: 600; }
+.step-transition { color: #b45309; font-weight: 600; }
+
+/* ── Legend ─────────────────────────────────────────────────────────────────── */
+.legend { margin-top: auto; padding-top: 10px; border-top: 1px solid #eee; }
+.legend h4 { font-size: 10px; text-transform: uppercase; color: #9ca3af; margin-bottom: 6px; letter-spacing: 0.05em; }
+.legend-row { display: flex; align-items: center; gap: 6px; font-size: 11px; color: #4b5563; margin-bottom: 3px; }
+.legend-swatch { width: 12px; height: 12px; border-radius: 2px; border: 1px solid rgba(0,0,0,0.15); flex-shrink: 0; }
+
+/* ── Map ────────────────────────────────────────────────────────────────────── */
+#map { flex: 1; height: 100vh; background: #f5f6f8; }
+
+/* shop labels on the floorplan */
+.shop-label {
+    background: transparent; border: none; box-shadow: none;
+    color: #374151; font-size: 10px; font-weight: 600;
+    text-shadow: 0 0 2px #fff, 0 0 2px #fff;
+}
+
+/* route markers */
+.map-pin {
+    padding: 4px 8px; border-radius: 4px; color: #fff;
+    font-size: 12px; font-weight: 600; white-space: nowrap;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.3);
+}
+
+/* ── QR overlay ─────────────────────────────────────────────────────────────── */
+#qrOverlay {
+    position: fixed; inset: 0;
+    background: rgba(0, 0, 0, 0.65);
+    z-index: 9999;
+    display: flex; align-items: center; justify-content: center;
+}
+#qrModal {
+    background: #fff; border-radius: 12px; padding: 20px;
+    display: flex; flex-direction: column; align-items: center; gap: 14px;
+    max-width: 360px; width: 90%;
+}
+#qrModal p { font-size: 14px; color: #6b7280; text-align: center; }
+#qrVideo { width: 100%; border-radius: 8px; background: #000; max-height: 300px; object-fit: cover; }
+#qrClose { padding: 8px 28px; border: 1px solid #d1d5db; border-radius: 6px; background: #f9fafb; cursor: pointer; font-size: 14px; }
+#qrClose:hover { background: #e5e7eb; }
+
+.hidden { display: none !important; }

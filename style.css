@@ -169,7 +169,32 @@ body {
 .legend-swatch { width: 12px; height: 12px; border-radius: 2px; border: 1px solid rgba(0,0,0,0.15); flex-shrink: 0; }
 
 /* ── Map ────────────────────────────────────────────────────────────────────── */
-#map { flex: 1; height: 100vh; background: #a6b0bf; }
+#map { flex: 1; height: 100vh; background: #a6b0bf; position: relative; }
+
+/* on-map floor selector buttons */
+.floor-buttons {
+    display: flex; flex-direction: column;
+    background: #fff; border-radius: 8px; overflow: hidden;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
+}
+.floor-btn {
+    width: 40px; height: 40px; border: none; background: #fff; cursor: pointer;
+    font-size: 14px; font-weight: 700; color: #374151;
+    border-bottom: 1px solid #eee; transition: background 0.12s, color 0.12s;
+}
+.floor-btn:last-child { border-bottom: none; }
+.floor-btn:hover { background: #f3f4f6; }
+.floor-btn.active { background: #3b82f6; color: #fff; }
+
+/* floor-change toast overlay */
+.floor-toast {
+    position: absolute; top: 16px; left: 50%; transform: translateX(-50%);
+    z-index: 500; pointer-events: none;
+    background: rgba(26, 26, 46, 0.85); color: #fff; font-weight: 700; font-size: 15px;
+    padding: 8px 18px; border-radius: 20px;
+    opacity: 0; transition: opacity 0.25s; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+.floor-toast.show { opacity: 1; }
 
 /* shop labels on the floorplan (permanent, zoom-gated) */
 .shop-label {

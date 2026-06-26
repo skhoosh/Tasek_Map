@@ -7,7 +7,7 @@
     <title>Tasek Mall Navigator</title>
 
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-    <link rel="stylesheet" href="style.css?v=15">
+    <link rel="stylesheet" href="style.css?v=17">
 
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script src="https://unpkg.com/leaflet-polylinedecorator/dist/leaflet.polylineDecorator.js"></script>
@@ -20,18 +20,6 @@
 <body>
     <div id="nav-panel">
         <h2 id="nav-title">Tasek Mall</h2>
-
-        <div class="nav-row">
-            <label for="floorLevel">Floor</label>
-            <select id="floorLevel">
-                <option value="G">Ground</option>
-                <option value="1">Level 1</option>
-                <option value="2">Level 2</option>
-                <option value="3">Level 3</option>
-                <option value="4">Level 4</option>
-                <option value="5">Level 5</option>
-            </select>
-        </div>
 
         <div class="nav-row">
             <label for="categoryFilter">Filter by category</label>
@@ -72,7 +60,9 @@
         <div id="legend" class="legend"></div>
     </div>
 
-    <div id="map"></div>
+    <div id="map">
+        <div id="floorToast" class="floor-toast"></div>
+    </div>
 
     <!-- QR scanner overlay -->
     <div id="qrOverlay" class="hidden">
@@ -84,7 +74,7 @@
         </div>
     </div>
 
-    <script src="script.js?v=15"></script>
+    <script src="script.js?v=17"></script>
 </body>
 
 </html>

@@ -81,6 +81,34 @@ const map = L.map("map", {
 new ResizeObserver(() => map.invalidateSize({ animate: false }))
     .observe(document.getElementById("map"));
 
+// ── On-map floor selector (buttons, highest floor on top) ──────────────────────
+const FloorControl = L.Control.extend({
+    options: { position: "topright" },
+    onAdd() {
+        const div = L.DomUtil.create("div", "floor-buttons");
+        FLOORS.slice().reverse().forEach(fl => {
+            const b = L.DomUtil.create("button", "floor-btn", div);
+            b.textContent = fl;
+            b.dataset.floor = fl;
+            L.DomEvent.on(b, "click", L.DomEvent.stop).on(b, "click", () => showFloor(fl));
+        });
+        L.DomEvent.disableClickPropagation(div);
+        return div;
+    },
+});
+map.addControl(new FloorControl());
+
+// brief centred overlay announcing the floor when it changes
+let floorToastTimer = null;
+function flashFloorToast(floor) {
+    const t = document.getElementById("floorToast");
+    if (!t) return;
+    t.textContent = floorName(floor);
+    t.classList.add("show");
+    clearTimeout(floorToastTimer);
+    floorToastTimer = setTimeout(() => t.classList.remove("show"), 900);
+}
+
 var southWest = L.latLng(1.511292, 103.65357)
 var northEast = L.latLng(1.516925, 103.656255)
 var bounds = L.latLngBounds(southWest,northEast)
@@ -97,7 +125,7 @@ let edgeType = {};           // "from-to" -> type (walk/escalator/lift)
 let edgeGeom = {};           // "from-to" -> [[lat,lon], ...]
 let shopList = [];           // searchable destinations
 let floorPlanLayers = {};    // floor_label -> L.layerGroup
-let activeFloor = "G";
+let activeFloor = "2";
 
 
 let currentRoute = null;     // { segments:{floor:[latlng]}, transitions:[], origin, dest, steps:[] }
@@ -121,13 +149,30 @@ var endLocation = L.icon({
 
 var escalatorUp = L.icon({
     iconUrl: "icons/escalatorUp.svg",
-    iconSize:[50,50],  
+    iconSize:[50,50],
 });
 
 var escalatorDown = L.icon({
     iconUrl: "icons/escalatorDown.svg",
-    iconSize:[50,50],  
+    iconSize:[50,50],
 });
+
+var liftUp = L.icon({
+    iconUrl: "icons/liftUp.svg",
+    iconSize:[50,50],
+});
+
+var liftDown = L.icon({
+    iconUrl: "icons/liftDown.svg",
+    iconSize:[50,50],
+});
+
+// pick the right SVG icon for a vertical transition
+function transitionMarkerIcon(type, goingUp) {
+    if (type === "escalator") return goingUp ? escalatorUp : escalatorDown;
+    if (type === "lift") return goingUp ? liftUp : liftDown;
+    return null; // stairs: no dedicated icon
+}
 
 // L.marker([1.514149, 103.655106], {icon: testIcon}).addTo(map);
 
@@ -202,8 +247,8 @@ Promise.all([
 
     buildLegend();
     buildCategoryFilter();
-    showFloor("G");
-    fitToFloor("G");
+    showFloor("2");
+    fitToFloor("2");
     updateLabelVisibility();
     console.log(`Loaded ${Object.keys(nodesById).length} nodes, ${shopList.length} shops, floors ${FLOORS}`);
 });
@@ -226,7 +271,8 @@ function buildLegend() {
 // ── Floor switching ───────────────────────────────────────────────────────────
 function showFloor(floor) {
     activeFloor = floor;
-    document.getElementById("floorLevel").value = floor;
+    document.querySelectorAll(".floor-btn").forEach(b => b.classList.toggle("active", b.dataset.floor === floor));
+    flashFloorToast(floor);
 
     planLayer.clearLayers();
     if (floorPlanLayers[floor]) planLayer.addLayer(floorPlanLayers[floor]);
@@ -257,9 +303,6 @@ function updateLabelVisibility() {
 }
 map.on("zoomend", updateLabelVisibility);
 
-document.getElementById("floorLevel").addEventListener("change", function () {
-    showFloor(this.value);
-});
 
 // ── A* ────────────────────────────────────────────────────────────────────────
 function heuristic(a, b) {
@@ -404,23 +447,16 @@ function renderRouteForActiveFloor() {
         if (tr.fromFloor === activeFloor) {
             const n = nodesById[tr.atNode];
             const goingUp = (FLOOR_ORDER[tr.toFloor] ?? 0) > (FLOOR_ORDER[tr.fromFloor] ?? 0);
-            if (tr.type === "escalator") {
-                pin([n.lat, n.lon], goingUp ? escalatorUp : escalatorDown).addTo(markerLayer);
+            const icon = transitionMarkerIcon(tr.type, goingUp);
+            if (icon) {
+                pin([n.lat, n.lon], icon).addTo(markerLayer);
             } else {
-                // lift / stairs (no dedicated SVG): labelled marker with up/down arrow
-                const label = tr.type === "lift" ? "Lift" : "Stairs";
+                // stairs (no dedicated SVG): labelled marker with up/down arrow
                 L.marker([n.lat, n.lon], {
                     icon: L.divIcon({ className: "", iconAnchor: [0, 0],
-                        html: `<div class="map-pin" style="background:#b45309"><span class="dir-arrow">${goingUp ? "▲" : "▼"}</span> ${label} to ${floorName(tr.toFloor)}</div>` }),
+                        html: `<div class="map-pin" style="background:#b45309"><span class="dir-arrow">${goingUp ? "▲" : "▼"}</span> Stairs to ${floorName(tr.toFloor)}</div>` }),
                 }).addTo(markerLayer);
             }
-        }
-        if (tr.toFloor === activeFloor) {
-            const n = nodesById[tr.toNode];
-            L.marker([n.lat, n.lon], {
-                icon: L.divIcon({ className: "", iconAnchor: [0, 0],
-                    html: `<div class="map-pin" style="background:#0ea5e9">&#128072; Continue on ${floorName(activeFloor)}</div>` }),
-            }).addTo(markerLayer);
         }
     }
     highlightSteps();
@@ -598,7 +634,7 @@ function makeAutocomplete(inputId, listId, onSelect) {
     autocompletes.push({ input, list, render });
 }
 
-makeAutocomplete("fromInput", "fromSuggestions", s => { fromShop = s; updateNavigateBtn(); });
+makeAutocomplete("fromInput", "fromSuggestions", s => setFrom(s));
 makeAutocomplete("toInput", "toSuggestions", s => { toShop = s; updateNavigateBtn(); });
 
 // ── QR scanning ───────────────────────────────────────────────────────────────
@@ -668,7 +704,16 @@ function setFrom(shop) {
     fromShop = shop;
     document.getElementById("fromInput").value = shop.name;
     updateNavigateBtn();
-    if (shop.floor_label) showFloor(shop.floor_label);
+    showFromPreview();
+}
+
+// When a start location is chosen (before navigating), jump to its floor, drop the
+// start marker, and zoom in on it.
+function showFromPreview() {
+    if (!fromShop || currentRoute) return;   // an active route view takes precedence
+    showFloor(fromShop.floor_label);          // clears markerLayer (no route yet)
+    L.marker([fromShop.lat, fromShop.lon], { icon: startLocation }).addTo(markerLayer);
+    map.setView([fromShop.lat, fromShop.lon], 20, { animate: true });
 }
 
 function setTo(shop) {

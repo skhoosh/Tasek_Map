@@ -83,7 +83,7 @@ new ResizeObserver(() => map.invalidateSize({ animate: false }))
 
 // ── On-map floor selector (buttons, highest floor on top) ──────────────────────
 const FloorControl = L.Control.extend({
-    options: { position: "topright" },
+    options: { position: "bottomright" },
     onAdd() {
         const div = L.DomUtil.create("div", "floor-buttons");
         FLOORS.slice().reverse().forEach(fl => {

@@ -7,10 +7,9 @@
     <title>Tasek Mall Navigator</title>
 
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=12">
 
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-    <script src="https://unpkg.com/leaflet-rotate@0.2.8/dist/leaflet-rotate-src.js"></script>
     <script src="https://unpkg.com/leaflet-polylinedecorator/dist/leaflet.polylineDecorator.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/jsqr@1.4.0/dist/jsQR.min.js"></script>
 </head>
@@ -28,6 +27,13 @@
                 <option value="3">Level 3</option>
                 <option value="4">Level 4</option>
                 <option value="5">Level 5</option>
+            </select>
+        </div>
+
+        <div class="nav-row">
+            <label for="categoryFilter">Filter by category</label>
+            <select id="categoryFilter">
+                <option value="">All categories</option>
             </select>
         </div>
 
@@ -69,7 +75,7 @@
         </div>
     </div>
 
-    <script src="script.js"></script>
+    <script src="script.js?v=12"></script>
 </body>
 
 </html>

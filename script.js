@@ -2,26 +2,26 @@
 const FLOOR_ORDER = { B2: -2, B1: -1, G: 0, "1": 1, "2": 2, "3": 3, "4": 4, "5": 5, "6": 6 };
 const FLOORS = ["G", "1", "2", "3", "4", "5"];
 
-// Floorplan polygon styling by Type
+// Floorplan polygon styling by Type (higher contrast so it stands out on the bg)
 const TYPE_STYLE = {
-    Shop:           { color: "#b9c6d6", weight: 1, fillColor: "#e8eef5", fillOpacity: 0.9 },
-    Walkway:        { color: "#e7dcc2", weight: 1, fillColor: "#faf6ea", fillOpacity: 0.9 },
-    Courtyard:      { color: "#e7dcc2", weight: 1, fillColor: "#faf6ea", fillOpacity: 0.9 },
-    Toilet:         { color: "#9cc3d8", weight: 1, fillColor: "#d8ecf5", fillOpacity: 0.9 },
-    "Nursing Room": { color: "#d8a9c8", weight: 1, fillColor: "#f5e1ee", fillOpacity: 0.9 },
-    Surau:          { color: "#a9c8b0", weight: 1, fillColor: "#e1f0e6", fillOpacity: 0.9 },
-    Lift:           { color: "#e0a85a", weight: 1, fillColor: "#ffe6c2", fillOpacity: 0.95 },
-    Escalator:      { color: "#e0a85a", weight: 1, fillColor: "#ffedd6", fillOpacity: 0.95 },
-    "Back of House":{ color: "#cfcfcf", weight: 1, fillColor: "#ececec", fillOpacity: 0.8 },
-    Carpark:        { color: "#cfcfcf", weight: 1, fillColor: "#eeeeee", fillOpacity: 0.8 },
-    "Event Hall":   { color: "#b9a9d8", weight: 1, fillColor: "#e8e1f5", fillOpacity: 0.9 },
-    Void:           { color: "#e5e7eb", weight: 1, fillColor: "#ffffff", fillOpacity: 0 },
-    _default:       { color: "#cbd5e1", weight: 1, fillColor: "#eef1f5", fillOpacity: 0.85 },
+    Shop:           { color: "#7d97bb", weight: 1, fillColor: "#d3e1f4", fillOpacity: 1 },
+    Walkway:        { color: "#cbbd97", weight: 1, fillColor: "#fbf6ea", fillOpacity: 1 },
+    Courtyard:      { color: "#cbbd97", weight: 1, fillColor: "#fbf6ea", fillOpacity: 1 },
+    Toilet:         { color: "#579fc4", weight: 1, fillColor: "#bbe0f2", fillOpacity: 1 },
+    "Nursing Room": { color: "#c684b1", weight: 1, fillColor: "#efccdf", fillOpacity: 1 },
+    Surau:          { color: "#7fb58e", weight: 1, fillColor: "#c8e9d1", fillOpacity: 1 },
+    Lift:           { color: "#cf8526", weight: 1, fillColor: "#ffc673", fillOpacity: 1 },
+    Escalator:      { color: "#cf8526", weight: 1, fillColor: "#ffd595", fillOpacity: 1 },
+    "Back of House":{ color: "#aeb4bd", weight: 1, fillColor: "#d4d8df", fillOpacity: 1 },
+    Carpark:        { color: "#aeb4bd", weight: 1, fillColor: "#dadde2", fillOpacity: 1 },
+    "Event Hall":   { color: "#9b89c4", weight: 1, fillColor: "#dbcff1", fillOpacity: 1 },
+    Void:           { color: "#00000000", weight: 0, fillColor: "#ffffff", fillOpacity: 0 },
+    _default:       { color: "#a7b1c0", weight: 1, fillColor: "#e2e8f0", fillOpacity: 1 },
 };
 
 const LEGEND = [
-    ["Shop", "#e8eef5"], ["Walkway", "#faf6ea"], ["Toilet", "#d8ecf5"],
-    ["Lift", "#ffe6c2"], ["Escalator", "#ffedd6"], ["Back of House", "#ececec"],
+    ["Shop", "#d3e1f4"], ["Walkway", "#fbf6ea"], ["Toilet", "#bbe0f2"],
+    ["Lift", "#ffc673"], ["Escalator", "#ffd595"], ["Back of House", "#d4d8df"],
 ];
 
 const TRANSITION_LABEL = { lift: "Take lift", escalator: "Take escalator", stairs: "Take stairs" };
@@ -32,6 +32,18 @@ function transitionIcon(type, fromFloor, toFloor) {
     const up = (FLOOR_ORDER[toFloor] ?? 0) > (FLOOR_ORDER[fromFloor] ?? 0);
     return (VEHICLE_ICON[type] || "") + (up ? "↑" : "↓");
 }
+
+// Merge near-duplicate category labels coming from the data (singular/plural, reordered).
+const CATEGORY_ALIAS = {
+    "Food and Beverage": "Food and Beverages",
+    "Leisure and Entertainment": "Entertainment and Leisure",
+    "Home": "Home and Living",
+    "Homes": "Home and Living",
+};
+function normCat(c) { return c ? (CATEGORY_ALIAS[c] || c) : null; }
+
+// Categories that aren't real shopping categories — kept out of the filter dropdown.
+const NON_SHOP_CATEGORIES = new Set(["Unoccupied", "Roof", "Storage", "Void", "Event Hall"]);
 
 // Facility node types that are searchable destinations (besides named shops)
 const FACILITIES = {
@@ -48,8 +60,6 @@ const map = L.map("map", {
     zoom: 18,
     minZoom: 16,
     maxZoom: 22,
-    rotate: true,
-    bearing: 316.5,
     zoomControl: true,
     attributionControl: false,
 });
@@ -111,7 +121,8 @@ Promise.all([
             const fl = String(p.FloorLevel);
             if (!floorPlanLayers[fl]) return;
             if (p.Type === "Shop" && p.ShopName) {
-                layer.bindTooltip(p.ShopName, { className: "shop-label", permanent: false, direction: "center" });
+                layer.bindTooltip(p.ShopName, { className: "shop-label", permanent: true, direction: "center" });
+                layer.on("click", e => openShopPopup(e, p));
             }
             layer.addTo(floorPlanLayers[fl]);
         },
@@ -120,7 +131,7 @@ Promise.all([
     // Searchable destinations: named shops + facilities (toilets, lifts, ...)
     const facilityNodes = [];
     for (const [id, n] of Object.entries(nodesById)) {
-        if (n.name) shopList.push({ name: n.name, nodeId: id, floor_label: n.floor_label, lat: n.lat, lon: n.lon });
+        if (n.name) shopList.push({ name: n.name, nodeId: id, floor_label: n.floor_label, lat: n.lat, lon: n.lon, category: normCat(n.category) });
         else if (FACILITIES[n.type]) facilityNodes.push({ id, n });
     }
     // number facilities that repeat on the same floor (e.g. "Toilet 1", "Toilet 2")
@@ -134,15 +145,17 @@ Promise.all([
         const k = `${n.type}|${n.floor_label}`;
         facSeen[k] = (facSeen[k] || 0) + 1;
         const suffix = facTotal[k] > 1 ? ` ${facSeen[k]}` : "";
-        return { name: `${f.icon} ${f.label}${suffix}`, nodeId: id, floor_label: n.floor_label, lat: n.lat, lon: n.lon, isFacility: true };
+        return { name: `${f.icon} ${f.label}${suffix}`, nodeId: id, floor_label: n.floor_label, lat: n.lat, lon: n.lon, isFacility: true, category: "Facilities" };
     });
     shopList.sort((a, b) => a.name.localeCompare(b.name));
     facList.sort((a, b) => a.name.localeCompare(b.name));
     shopList = shopList.concat(facList);
 
     buildLegend();
+    buildCategoryFilter();
     showFloor("G");
     fitToFloor("G");
+    updateLabelVisibility();
     console.log(`Loaded ${Object.keys(nodesById).length} nodes, ${shopList.length} shops, floors ${FLOORS}`);
 });
 
@@ -179,6 +192,13 @@ function fitToFloor(floor) {
     lg.eachLayer(l => { bounds = bounds ? bounds.extend(l.getBounds()) : l.getBounds(); });
     if (bounds) map.fitBounds(bounds, { padding: [30, 30] });
 }
+
+// Hide shop labels when zoomed out (avoids clutter); show when zoomed in.
+const LABEL_MIN_ZOOM = 17;
+function updateLabelVisibility() {
+    map.getContainer().classList.toggle("hide-labels", map.getZoom() < LABEL_MIN_ZOOM);
+}
+map.on("zoomend", updateLabelVisibility);
 
 document.getElementById("floorLevel").addEventListener("change", function () {
     showFloor(this.value);
@@ -290,17 +310,22 @@ function renderRouteForActiveFloor() {
 
     const coords = currentRoute.segments[activeFloor];
     if (coords && coords.length) {
-        const poly = L.polyline(coords, { color: "#ef4444", weight: 5, opacity: 0.9 }).addTo(routeLayer);
-        L.polylineDecorator(poly, {
-            patterns: [{ offset: "5%", repeat: "12%", symbol: L.Symbol.arrowHead({ pixelSize: 8, polygon: false, pathOptions: { stroke: true, color: "#1d4ed8", weight: 2 } }) }],
+        // solid base + animated "flow" overlay that moves toward the destination
+        const base = L.polyline(coords, { color: "#ef4444", weight: 6, opacity: 0.85 }).addTo(routeLayer);
+        L.polyline(coords, { color: "#fee2e2", weight: 3, opacity: 0.95, className: "route-flow" }).addTo(routeLayer);
+        L.polylineDecorator(base, {
+            patterns: [{ offset: "6%", repeat: "14%", symbol: L.Symbol.arrowHead({ pixelSize: 8, polygon: false, pathOptions: { stroke: true, color: "#1d4ed8", weight: 2 } }) }],
         }).addTo(routeLayer);
     }
 
-    // Escalator/stair connector lines — dashed, drawn on both the floor you leave and arrive,
-    // so users can see which way to walk onto and off the escalator.
+    // Escalator/stair connectors — animated amber dashes + arrows showing travel direction,
+    // drawn on both the floor you leave and the floor you arrive on.
     for (const c of (currentRoute.connectors || [])) {
         if (c.fromFloor === activeFloor || c.toFloor === activeFloor) {
-            L.polyline(c.geom, { color: "#b45309", weight: 4, opacity: 0.9, dashArray: "6 8" }).addTo(routeLayer);
+            const cp = L.polyline(c.geom, { color: "#b45309", weight: 4, opacity: 0.95, className: "route-flow" }).addTo(routeLayer);
+            L.polylineDecorator(cp, {
+                patterns: [{ offset: "10%", repeat: "28%", symbol: L.Symbol.arrowHead({ pixelSize: 9, polygon: false, pathOptions: { stroke: true, color: "#b45309", weight: 2 } }) }],
+            }).addTo(routeLayer);
         }
     }
 
@@ -418,15 +443,40 @@ function clearAll() {
 document.getElementById("navigateBtn").addEventListener("click", triggerRoute);
 document.getElementById("clearBtn").addEventListener("click", clearAll);
 
-// ── Autocomplete ──────────────────────────────────────────────────────────────
+// ── Category filter ───────────────────────────────────────────────────────────
+let activeCategory = "";
+const autocompletes = [];
+
+function buildCategoryFilter() {
+    const sel = document.getElementById("categoryFilter");
+    if (!sel) return;
+    const cats = [...new Set(shopList
+        .filter(s => !s.isFacility && s.category && !NON_SHOP_CATEGORIES.has(s.category))
+        .map(s => s.category))].sort();
+    cats.push("Facilities"); // browse toilets/lifts/entrances etc.
+    for (const c of cats) {
+        const o = document.createElement("option");
+        o.value = c; o.textContent = c;
+        sel.appendChild(o);
+    }
+    sel.addEventListener("change", function () {
+        activeCategory = this.value;
+        // re-open the focused field's list with the new filter applied
+        autocompletes.forEach(a => { if (document.activeElement === a.input) a.render(); });
+    });
+}
+
+// ── Combobox: focus shows the (category-filtered) list; typing narrows it ──────
 function makeAutocomplete(inputId, listId, onSelect) {
     const input = document.getElementById(inputId);
     const list = document.getElementById(listId);
-    input.addEventListener("input", () => {
+    const render = () => {
         const q = input.value.trim().toLowerCase();
+        const matches = shopList.filter(s =>
+            (!q || s.name.toLowerCase().includes(q)) &&
+            (!activeCategory || s.category === activeCategory)
+        ).slice(0, 60);
         list.innerHTML = "";
-        if (!q) { list.classList.add("hidden"); return; }
-        const matches = shopList.filter(s => s.name.toLowerCase().includes(q)).slice(0, 10);
         if (!matches.length) { list.classList.add("hidden"); return; }
         for (const shop of matches) {
             const li = document.createElement("li");
@@ -440,8 +490,11 @@ function makeAutocomplete(inputId, listId, onSelect) {
             list.appendChild(li);
         }
         list.classList.remove("hidden");
-    });
+    };
+    input.addEventListener("input", render);
+    input.addEventListener("focus", render);
     input.addEventListener("blur", () => setTimeout(() => list.classList.add("hidden"), 150));
+    autocompletes.push({ input, list, render });
 }
 
 makeAutocomplete("fromInput", "fromSuggestions", s => { fromShop = s; updateNavigateBtn(); });
@@ -515,4 +568,31 @@ function setFrom(shop) {
     document.getElementById("fromInput").value = shop.name;
     updateNavigateBtn();
     if (shop.floor_label) showFloor(shop.floor_label);
+}
+
+function setTo(shop) {
+    toShop = shop;
+    document.getElementById("toInput").value = shop.name;
+    updateNavigateBtn();
+}
+
+// Tap-to-select: clicking a shop polygon offers "From here" / "To here".
+function openShopPopup(e, p) {
+    const shop = shopList.find(s => s.name === p.ShopName && s.floor_label === String(p.FloorLevel));
+    if (!shop) return;
+    const div = document.createElement("div");
+    div.className = "map-popup";
+    div.innerHTML = `<div class="popup-title">${p.ShopName}</div><div class="popup-sub">${floorName(String(p.FloorLevel))}</div>`;
+    const row = document.createElement("div");
+    row.className = "popup-btns";
+    const bFrom = document.createElement("button");
+    bFrom.textContent = "From here";
+    bFrom.addEventListener("click", () => { setFrom(shop); map.closePopup(); });
+    const bTo = document.createElement("button");
+    bTo.textContent = "To here";
+    bTo.className = "primary";
+    bTo.addEventListener("click", () => { setTo(shop); map.closePopup(); });
+    row.append(bFrom, bTo);
+    div.append(row);
+    L.popup().setLatLng(e.latlng).setContent(div).openOn(map);
 }

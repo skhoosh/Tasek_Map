@@ -158,14 +158,36 @@ body {
 .legend-swatch { width: 12px; height: 12px; border-radius: 2px; border: 1px solid rgba(0,0,0,0.15); flex-shrink: 0; }
 
 /* ── Map ────────────────────────────────────────────────────────────────────── */
-#map { flex: 1; height: 100vh; background: #f5f6f8; }
+#map { flex: 1; height: 100vh; background: #a6b0bf; }
 
-/* shop labels on the floorplan */
+/* shop labels on the floorplan (permanent, zoom-gated) */
 .shop-label {
-    background: transparent; border: none; box-shadow: none;
-    color: #374151; font-size: 10px; font-weight: 600;
-    text-shadow: 0 0 2px #fff, 0 0 2px #fff;
+    background: transparent; border: none; box-shadow: none; padding: 0;
+    color: #243044; font-size: 10px; font-weight: 700;
+    text-shadow: 0 0 3px #fff, 0 0 3px #fff, 0 0 3px #fff;
+    white-space: nowrap;
 }
+.shop-label::before { display: none; }       /* hide tooltip pointer */
+.hide-labels .shop-label { display: none; }   /* hide when zoomed out */
+
+/* animated route flow (marching dashes travelling toward the destination) */
+.route-flow {
+    stroke-dasharray: 6 14;
+    animation: route-flow 1s linear infinite;
+}
+@keyframes route-flow { from { stroke-dashoffset: 0; } to { stroke-dashoffset: -20; } }
+
+/* tap-to-select popup */
+.map-popup { min-width: 130px; }
+.map-popup .popup-title { font-weight: 700; font-size: 13px; color: #1a1a2e; }
+.map-popup .popup-sub { font-size: 11px; color: #6b7280; margin-bottom: 8px; }
+.map-popup .popup-btns { display: flex; gap: 6px; }
+.map-popup .popup-btns button {
+    flex: 1; padding: 7px 8px; border: 1px solid #d1d5db; border-radius: 6px;
+    background: #f9fafb; cursor: pointer; font-size: 12px; font-weight: 600; white-space: nowrap;
+}
+.map-popup .popup-btns button.primary { background: #3b82f6; color: #fff; border-color: #3b82f6; }
+.map-popup .popup-btns button:hover { filter: brightness(0.96); }
 
 /* route markers */
 .map-pin {
@@ -192,3 +214,46 @@ body {
 #qrClose:hover { background: #e5e7eb; }
 
 .hidden { display: none !important; }
+
+/* ── Mobile: panel becomes a bottom sheet over a full-screen map ───────────────── */
+@media (max-width: 640px) {
+    body { flex-direction: column; }
+
+    #map { height: 100vh; width: 100vw; }
+
+    #nav-panel {
+        position: fixed;
+        left: 0; right: 0; bottom: 0;
+        width: 100%;
+        min-width: 0;
+        max-height: 58vh;
+        border-radius: 16px 16px 0 0;
+        box-shadow: 0 -3px 14px rgba(0, 0, 0, 0.2);
+        padding: 8px 16px 16px;
+        gap: 10px;
+        z-index: 1000;
+    }
+
+    /* drag-handle affordance */
+    #nav-panel::before {
+        content: "";
+        align-self: center;
+        width: 40px; height: 4px;
+        border-radius: 2px;
+        background: #d1d5db;
+        margin-bottom: 4px;
+        flex-shrink: 0;
+    }
+
+    #nav-title { font-size: 16px; }
+
+    /* bigger touch targets */
+    .nav-row input, .nav-row select { padding: 10px; font-size: 16px; }
+    .nav-actions button { padding: 12px; }
+
+    /* drop the legend on mobile to save vertical space */
+    .legend { display: none; }
+
+    /* suggestions open upward-friendly and scroll within the sheet */
+    .suggestions { max-height: 160px; }
+}

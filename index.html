@@ -7,11 +7,14 @@
     <title>Tasek Mall Navigator</title>
 
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-    <link rel="stylesheet" href="style.css?v=12">
+    <link rel="stylesheet" href="style.css?v=15">
 
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script src="https://unpkg.com/leaflet-polylinedecorator/dist/leaflet.polylineDecorator.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/jsqr@1.4.0/dist/jsQR.min.js"></script>
+ <!-- Leaflet-Rotate -->
+    <script src="https://unpkg.com/leaflet-rotate@0.2.8/dist/leaflet-rotate-src.js"></script>
+
 </head>
 
 <body>
@@ -40,7 +43,10 @@
         <div class="nav-row autocomplete-wrap">
             <label for="fromInput">From</label>
             <div class="input-with-btn">
-                <input type="text" id="fromInput" placeholder="Current location..." autocomplete="off">
+                <div class="field-clearable">
+                    <input type="text" id="fromInput" placeholder="Current location..." autocomplete="off">
+                    <button type="button" class="clear-field" data-target="fromInput" aria-label="Clear">&times;</button>
+                </div>
                 <button id="qrBtn" title="Scan QR code to set location">&#128247;</button>
             </div>
             <ul id="fromSuggestions" class="suggestions hidden"></ul>
@@ -48,7 +54,10 @@
 
         <div class="nav-row autocomplete-wrap">
             <label for="toInput">To</label>
-            <input type="text" id="toInput" placeholder="Destination..." autocomplete="off">
+            <div class="field-clearable">
+                <input type="text" id="toInput" placeholder="Destination..." autocomplete="off">
+                <button type="button" class="clear-field" data-target="toInput" aria-label="Clear">&times;</button>
+            </div>
             <ul id="toSuggestions" class="suggestions hidden"></ul>
         </div>
 
@@ -75,7 +84,7 @@
         </div>
     </div>
 
-    <script src="script.js?v=12"></script>
+    <script src="script.js?v=15"></script>
 </body>
 
 </html>

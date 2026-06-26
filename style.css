@@ -66,6 +66,17 @@ body {
 }
 .input-with-btn button:hover { background: #e5e7eb; }
 
+/* clearable field: input with a ✕ button to reset it */
+.field-clearable { position: relative; flex: 1; }
+.field-clearable input { width: 100%; padding-right: 30px; }
+.clear-field {
+    position: absolute; right: 6px; top: 50%; transform: translateY(-50%);
+    border: none; background: transparent; cursor: pointer;
+    font-size: 18px; line-height: 1; color: #9ca3af; padding: 0 4px; display: none;
+}
+.clear-field.show { display: block; }
+.clear-field:hover { color: #4b5563; }
+
 /* ── Autocomplete ───────────────────────────────────────────────────────────── */
 .autocomplete-wrap { position: relative; }
 
@@ -195,6 +206,7 @@ body {
     font-size: 12px; font-weight: 600; white-space: nowrap;
     box-shadow: 0 1px 4px rgba(0,0,0,0.3);
 }
+.map-pin .dir-arrow { font-size: 16px; font-weight: 800; line-height: 1; vertical-align: -1px; }
 
 /* ── QR overlay ─────────────────────────────────────────────────────────────── */
 #qrOverlay {
@@ -215,23 +227,23 @@ body {
 
 .hidden { display: none !important; }
 
-/* ── Mobile: panel becomes a bottom sheet over a full-screen map ───────────────── */
+/* ── Mobile: map on top, panel stacked below (map is NOT hidden behind the panel) ── */
 @media (max-width: 640px) {
     body { flex-direction: column; }
 
-    #map { height: 100vh; width: 100vw; }
+    /* map fills the area above the panel */
+    #map { order: -1; width: 100%; flex: 1 1 auto; height: auto; min-height: 0; }
 
     #nav-panel {
-        position: fixed;
-        left: 0; right: 0; bottom: 0;
+        position: static;
         width: 100%;
         min-width: 0;
-        max-height: 58vh;
+        max-height: 48vh;
         border-radius: 16px 16px 0 0;
         box-shadow: 0 -3px 14px rgba(0, 0, 0, 0.2);
         padding: 8px 16px 16px;
         gap: 10px;
-        z-index: 1000;
+        z-index: 10;
     }
 
     /* drag-handle affordance */

@@ -2,26 +2,33 @@
 const FLOOR_ORDER = { B2: -2, B1: -1, G: 0, "1": 1, "2": 2, "3": 3, "4": 4, "5": 5, "6": 6 };
 const FLOORS = ["G", "1", "2", "3", "4", "5"];
 
-// Floorplan polygon styling by Type (higher contrast so it stands out on the bg)
 const TYPE_STYLE = {
-    Shop:           { color: "#7d97bb", weight: 1, fillColor: "#d3e1f4", fillOpacity: 1 },
-    Walkway:        { color: "#cbbd97", weight: 1, fillColor: "#fbf6ea", fillOpacity: 1 },
-    Courtyard:      { color: "#cbbd97", weight: 1, fillColor: "#fbf6ea", fillOpacity: 1 },
-    Toilet:         { color: "#579fc4", weight: 1, fillColor: "#bbe0f2", fillOpacity: 1 },
-    "Nursing Room": { color: "#c684b1", weight: 1, fillColor: "#efccdf", fillOpacity: 1 },
-    Surau:          { color: "#7fb58e", weight: 1, fillColor: "#c8e9d1", fillOpacity: 1 },
-    Lift:           { color: "#cf8526", weight: 1, fillColor: "#ffc673", fillOpacity: 1 },
-    Escalator:      { color: "#cf8526", weight: 1, fillColor: "#ffd595", fillOpacity: 1 },
-    "Back of House":{ color: "#aeb4bd", weight: 1, fillColor: "#d4d8df", fillOpacity: 1 },
-    Carpark:        { color: "#aeb4bd", weight: 1, fillColor: "#dadde2", fillOpacity: 1 },
-    "Event Hall":   { color: "#9b89c4", weight: 1, fillColor: "#dbcff1", fillOpacity: 1 },
-    Void:           { color: "#00000000", weight: 0, fillColor: "#ffffff", fillOpacity: 0 },
-    _default:       { color: "#a7b1c0", weight: 1, fillColor: "#e2e8f0", fillOpacity: 1 },
+    Shop:           { color: "#9CB4A4", weight: 1, fillColor: "#DDE9E1", fillOpacity: 1 },
+
+    Walkway:        { color: "#D8CCB3", weight: 1, fillColor: "#F6F2E8", fillOpacity: 1 },
+    Courtyard:      { color: "#D8CCB3", weight: 1, fillColor: "#F6F2E8", fillOpacity: 1 },
+
+    Toilet:         { color: "#9BB2D3", weight: 1, fillColor: "#E7EEF7", fillOpacity: 1 },
+    "Nursing Room": { color: "#D09ABC", weight: 1, fillColor: "#F7E6F0", fillOpacity: 1 },
+    Surau:          { color: "#7BAF8C", weight: 1, fillColor: "#DDEFE2", fillOpacity: 1 },
+
+    Lift:           { color: "#D39B43", weight: 1, fillColor: "#F6D79B", fillOpacity: 1 },
+
+    Escalator:      { color: "#D6B26A", weight: 1, fillColor: "#F4D8A5", fillOpacity: 1 },
+
+    "Back of House":{ color: "#B7BEC8", weight: 1, fillColor: "#E1E5EA", fillOpacity: 1 },
+    Carpark:        { color: "#B7BEC8", weight: 1, fillColor: "#E7EAEE", fillOpacity: 1 },
+
+    "Event Hall":   { color: "#A69BD4", weight: 1, fillColor: "#ECE8FA", fillOpacity: 1 },
+
+    Void:           { color: "#00000000", weight: 0, fillColor: "#FFFFFF", fillOpacity: 0 },
+
+    _default:       { color: "#B7BEC8", weight: 1, fillColor: "#E7EAEE", fillOpacity: 1 },
 };
 
 const LEGEND = [
-    ["Shop", "#d3e1f4"], ["Walkway", "#fbf6ea"], ["Toilet", "#bbe0f2"],
-    ["Lift", "#ffc673"], ["Escalator", "#ffd595"], ["Back of House", "#d4d8df"],
+    ["Shop", "#DDE9E1"], ["Walkway", "#F6F2E8"], ["Toilet", "#E7EEF7"],
+    ["Lift", "#F6D79B"], ["Escalator", "#F4D8A5"], ["Back of House", "#E1E5EA"],
 ];
 
 const TRANSITION_LABEL = { lift: "Take lift", escalator: "Take escalator", stairs: "Take stairs" };
@@ -58,10 +65,28 @@ const FACILITIES = {
 const map = L.map("map", {
     center: [1.5141, 103.6549],
     zoom: 18,
-    minZoom: 16,
+    minZoom: 18,
     maxZoom: 22,
     zoomControl: true,
     attributionControl: false,
+    rotate: true,
+    bearing: 316.5,
+    // lock the rotation so users can't knock it off 316.5°
+    rotateControl: false,
+    touchRotate: false,
+    shiftKeyRotate: false,
+});
+
+// keep the map sized to its (resizable) container so it isn't hidden behind the panel
+new ResizeObserver(() => map.invalidateSize({ animate: false }))
+    .observe(document.getElementById("map"));
+
+var southWest = L.latLng(1.511292, 103.65357)
+var northEast = L.latLng(1.516925, 103.656255)
+var bounds = L.latLngBounds(southWest,northEast)
+map.setMaxBounds(bounds)
+map.on('drag', function() {
+    map.panInsideBounds(bounds, { animate: false });
 });
 
 // ── State ─────────────────────────────────────────────────────────────────────
@@ -74,12 +99,37 @@ let shopList = [];           // searchable destinations
 let floorPlanLayers = {};    // floor_label -> L.layerGroup
 let activeFloor = "G";
 
+
 let currentRoute = null;     // { segments:{floor:[latlng]}, transitions:[], origin, dest, steps:[] }
 let fromShop = null, toShop = null;
 
 const planLayer = L.layerGroup().addTo(map);   // active floorplan
 const routeLayer = L.layerGroup().addTo(map);  // active-floor route line
 const markerLayer = L.layerGroup().addTo(map); // pins for active floor
+
+
+// ── Use icon markers ───────────────────────────────────────────────────────────
+var startLocation = L.icon({
+    iconUrl: "icons/startLocation.svg",
+    iconSize:[50,50],
+})
+
+var endLocation = L.icon({
+    iconUrl: "icons/endLocation.svg",
+    iconSize:[50,50],  
+});
+
+var escalatorUp = L.icon({
+    iconUrl: "icons/escalatorUp.svg",
+    iconSize:[50,50],  
+});
+
+var escalatorDown = L.icon({
+    iconUrl: "icons/escalatorDown.svg",
+    iconSize:[50,50],  
+});
+
+// L.marker([1.514149, 103.655106], {icon: testIcon}).addTo(map);
 
 // ── Load everything ───────────────────────────────────────────────────────────
 Promise.all([
@@ -91,7 +141,6 @@ Promise.all([
 ]).then(([graphData, plans, edges, up, down]) => {
     graph = graphData;
     nodesById = graph.nodes;
-
     // Adjacency + edge type for A*
     for (const e of graph.edges) {
         (adj[e.from] = adj[e.from] || []).push({ to: e.to, weight: e.weight });
@@ -190,7 +239,15 @@ function fitToFloor(floor) {
     if (!lg) return;
     let bounds = null;
     lg.eachLayer(l => { bounds = bounds ? bounds.extend(l.getBounds()) : l.getBounds(); });
-    if (bounds) map.fitBounds(bounds, { padding: [30, 30] });
+    if (bounds) map.fitBounds(bounds, fitOpts());
+}
+
+// The map div now occupies only the unblocked area (panel doesn't overlap it),
+// so plain padding frames the route correctly on every screen size.
+function fitOpts(maxZoom) {
+    const opts = { padding: [30, 30] };
+    if (maxZoom) opts.maxZoom = maxZoom;
+    return opts;
 }
 
 // Hide shop labels when zoomed out (avoids clutter); show when zoomed in.
@@ -297,9 +354,15 @@ function buildRoute(path) {
 }
 
 // ── Rendering ─────────────────────────────────────────────────────────────────
-function pin(latlng, html, bg) {
+// function pin(latlng, html, bg) {
+//     return L.marker(latlng, {
+//         icon: L.divIcon({ className: "", html: `<div class="map-pin" style="background:${bg}">${html}</div>`, iconAnchor: [0, 0] }),
+//     });
+// }
+
+function pin(latlng, iconName) {
     return L.marker(latlng, {
-        icon: L.divIcon({ className: "", html: `<div class="map-pin" style="background:${bg}">${html}</div>`, iconAnchor: [0, 0] }),
+        icon: iconName,
     });
 }
 
@@ -310,11 +373,12 @@ function renderRouteForActiveFloor() {
 
     const coords = currentRoute.segments[activeFloor];
     if (coords && coords.length) {
-        // solid base + animated "flow" overlay that moves toward the destination
-        const base = L.polyline(coords, { color: "#ef4444", weight: 6, opacity: 0.85 }).addTo(routeLayer);
-        L.polyline(coords, { color: "#fee2e2", weight: 3, opacity: 0.95, className: "route-flow" }).addTo(routeLayer);
+        // white casing (readable on any background) + bold route + animated flow toward destination
+        L.polyline(coords, { color: "#ffffff", weight: 9, opacity: 0.95 }).addTo(routeLayer);
+        const base = L.polyline(coords, { color: "#1D4ED8", weight: 5, opacity: 1 }).addTo(routeLayer);
+        L.polyline(coords, { color: "#76e7f8", weight: 2, opacity: 1, className: "route-flow" }).addTo(routeLayer);
         L.polylineDecorator(base, {
-            patterns: [{ offset: "6%", repeat: "14%", symbol: L.Symbol.arrowHead({ pixelSize: 8, polygon: false, pathOptions: { stroke: true, color: "#1d4ed8", weight: 2 } }) }],
+            patterns: [{ offset: "6%", repeat: "14%", symbol: L.Symbol.arrowHead({ pixelSize: 6, polygon: false, pathOptions: { stroke: true, color: "#76e7f8", weight: 3 } }) }],
         }).addTo(routeLayer);
     }
 
@@ -322,27 +386,41 @@ function renderRouteForActiveFloor() {
     // drawn on both the floor you leave and the floor you arrive on.
     for (const c of (currentRoute.connectors || [])) {
         if (c.fromFloor === activeFloor || c.toFloor === activeFloor) {
-            const cp = L.polyline(c.geom, { color: "#b45309", weight: 4, opacity: 0.95, className: "route-flow" }).addTo(routeLayer);
+            const cp = L.polyline(c.geom, { color: "#6a8ded", weight: 5, opacity: 1 }).addTo(routeLayer);
+            L.polyline(c.geom, { color: "#76e7f8", weight: 2, opacity: 0.95, className: "route-flow" }).addTo(routeLayer);
             L.polylineDecorator(cp, {
-                patterns: [{ offset: "10%", repeat: "28%", symbol: L.Symbol.arrowHead({ pixelSize: 9, polygon: false, pathOptions: { stroke: true, color: "#b45309", weight: 2 } }) }],
+                patterns: [{ offset: "10%", repeat: "28%", symbol: L.Symbol.arrowHead({ pixelSize: 6, polygon: false, pathOptions: { stroke: true, color: "#76e7f8", weight: 3 } }) }],
             }).addTo(routeLayer);
         }
     }
-
+// L.marker([1.514149, 103.655106], {icon: testIcon}).addTo(map);
     // origin / destination pins, only on their own floor
     const o = nodesById[currentRoute.originNode], d = nodesById[currentRoute.destNode];
-    if (o.floor_label === activeFloor) pin([o.lat, o.lon], "&#128205; You are here", "#22c55e").addTo(markerLayer);
-    if (d.floor_label === activeFloor) pin([d.lat, d.lon], `&#127937; ${toShop ? toShop.name : "Destination"}`, "#ef4444").addTo(markerLayer);
+    if (o.floor_label === activeFloor) pin([o.lat, o.lon], startLocation).addTo(markerLayer);
+    if (d.floor_label === activeFloor) pin([d.lat, d.lon], endLocation).addTo(markerLayer);
 
     // transition pins: leaving this floor, and arriving on this floor
     for (const tr of currentRoute.transitions) {
         if (tr.fromFloor === activeFloor) {
             const n = nodesById[tr.atNode];
-            pin([n.lat, n.lon], `${transitionIcon(tr.type, tr.fromFloor, tr.toFloor)} ${TRANSITION_LABEL[tr.type] || "Go"} to ${floorName(tr.toFloor)}`, "#b45309").addTo(markerLayer);
+            const goingUp = (FLOOR_ORDER[tr.toFloor] ?? 0) > (FLOOR_ORDER[tr.fromFloor] ?? 0);
+            if (tr.type === "escalator") {
+                pin([n.lat, n.lon], goingUp ? escalatorUp : escalatorDown).addTo(markerLayer);
+            } else {
+                // lift / stairs (no dedicated SVG): labelled marker with up/down arrow
+                const label = tr.type === "lift" ? "Lift" : "Stairs";
+                L.marker([n.lat, n.lon], {
+                    icon: L.divIcon({ className: "", iconAnchor: [0, 0],
+                        html: `<div class="map-pin" style="background:#b45309"><span class="dir-arrow">${goingUp ? "▲" : "▼"}</span> ${label} to ${floorName(tr.toFloor)}</div>` }),
+                }).addTo(markerLayer);
+            }
         }
         if (tr.toFloor === activeFloor) {
             const n = nodesById[tr.toNode];
-            pin([n.lat, n.lon], `&#128072; Continue on ${floorName(activeFloor)}`, "#0ea5e9").addTo(markerLayer);
+            L.marker([n.lat, n.lon], {
+                icon: L.divIcon({ className: "", iconAnchor: [0, 0],
+                    html: `<div class="map-pin" style="background:#0ea5e9">&#128072; Continue on ${floorName(activeFloor)}</div>` }),
+            }).addTo(markerLayer);
         }
     }
     highlightSteps();
@@ -394,7 +472,7 @@ function fitMapToStep(step) {
             t.type === step.type && t.fromFloor === step.fromFloor && t.toFloor === step.toFloor);
         if (tr) addNode(tr.toNode);
     }
-    if (bounds) map.fitBounds(bounds, { padding: [50, 50], maxZoom: 21 });
+    if (bounds) map.fitBounds(bounds, fitOpts(21));
 }
 
 function highlightSteps() {
@@ -406,7 +484,30 @@ function highlightSteps() {
 // ── Navigation ────────────────────────────────────────────────────────────────
 function updateNavigateBtn() {
     document.getElementById("navigateBtn").disabled = !(fromShop && toShop);
+    refreshClearBtns();
 }
+
+// Show/hide the per-field clear (✕) buttons based on whether the field has text.
+function refreshClearBtns() {
+    document.querySelectorAll(".clear-field").forEach(btn => {
+        const inp = document.getElementById(btn.dataset.target);
+        if (inp) btn.classList.toggle("show", !!inp.value);
+    });
+}
+
+document.querySelectorAll(".clear-field").forEach(btn => {
+    const inp = document.getElementById(btn.dataset.target);
+    inp.addEventListener("input", refreshClearBtns);
+    btn.addEventListener("mousedown", e => e.preventDefault()); // don't blur the field before click
+    btn.addEventListener("click", () => {
+        inp.value = "";
+        if (btn.dataset.target === "fromInput") fromShop = null; else toShop = null;
+        const listId = btn.dataset.target === "fromInput" ? "fromSuggestions" : "toSuggestions";
+        document.getElementById(listId).classList.add("hidden");
+        updateNavigateBtn();
+        inp.focus();
+    });
+});
 
 function triggerRoute() {
     if (!fromShop || !toShop || !graph) return;
@@ -425,7 +526,7 @@ function triggerRoute() {
     renderSteps();
     showFloor(nodesById[currentRoute.originNode].floor_label);
     const seg = currentRoute.segments[activeFloor];
-    if (seg && seg.length) map.fitBounds(L.polyline(seg).getBounds(), { padding: [40, 40] });
+    if (seg && seg.length) map.fitBounds(L.polyline(seg).getBounds(), fitOpts());
 }
 
 function clearAll() {

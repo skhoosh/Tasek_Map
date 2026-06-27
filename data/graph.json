@@ -1,315 +1,5 @@
 {
   "nodes": {
-    "n_G_0001": {
-      "lat": 1.513851617169215,
-      "lon": 103.65468819288152,
-      "floor": 0,
-      "floor_label": "G",
-      "type": "Entrance",
-      "name": null,
-      "lotno": null,
-      "category": null
-    },
-    "n_G_0002": {
-      "lat": 1.513889007922556,
-      "lon": 103.65464913986767,
-      "floor": 0,
-      "floor_label": "G",
-      "type": "Corridor",
-      "name": null,
-      "lotno": null,
-      "category": null
-    },
-    "n_G_0003": {
-      "lat": 1.513770890765671,
-      "lon": 103.65453597011818,
-      "floor": 0,
-      "floor_label": "G",
-      "type": "Corridor",
-      "name": null,
-      "lotno": null,
-      "category": null
-    },
-    "n_G_0004": {
-      "lat": 1.513754989932481,
-      "lon": 103.65455257890365,
-      "floor": 0,
-      "floor_label": "G",
-      "type": "Shop",
-      "name": "La Primeur",
-      "lotno": "G-11",
-      "category": "Food and Beverage"
-    },
-    "n_G_0005": {
-      "lat": 1.513735795570471,
-      "lon": 103.654463086093,
-      "floor": 0,
-      "floor_label": "G",
-      "type": "Entrance",
-      "name": null,
-      "lotno": null,
-      "category": null
-    },
-    "n_G_0006": {
-      "lat": 1.51379049523869,
-      "lon": 103.65451549279571,
-      "floor": 0,
-      "floor_label": "G",
-      "type": "Corridor",
-      "name": null,
-      "lotno": null,
-      "category": null
-    },
-    "n_G_0007": {
-      "lat": 1.513810574359683,
-      "lon": 103.65453473023001,
-      "floor": 0,
-      "floor_label": "G",
-      "type": "Corridor",
-      "name": null,
-      "lotno": null,
-      "category": null
-    },
-    "n_G_0008": {
-      "lat": 1.513929065246122,
-      "lon": 103.65436184935501,
-      "floor": 0,
-      "floor_label": "G",
-      "type": "Shop",
-      "name": "80's 90's",
-      "lotno": "G-07",
-      "category": "Food and Beverage"
-    },
-    "n_G_0009": {
-      "lat": 1.513953595997037,
-      "lon": 103.6543853527139,
-      "floor": 0,
-      "floor_label": "G",
-      "type": "Corridor",
-      "name": null,
-      "lotno": null,
-      "category": null
-    },
-    "n_G_0010": {
-      "lat": 1.513962419204179,
-      "lon": 103.65437613740328,
-      "floor": 0,
-      "floor_label": "G",
-      "type": "Corridor",
-      "name": null,
-      "lotno": null,
-      "category": null
-    },
-    "n_G_0011": {
-      "lat": 1.513986950352254,
-      "lon": 103.65439963981021,
-      "floor": 0,
-      "floor_label": "G",
-      "type": "Shop",
-      "name": "Wa Cee",
-      "lotno": "G-16",
-      "category": null
-    },
-    "n_G_0012": {
-      "lat": 1.513995285709141,
-      "lon": 103.65434181030992,
-      "floor": 0,
-      "floor_label": "G",
-      "type": "Corridor",
-      "name": null,
-      "lotno": null,
-      "category": null
-    },
-    "n_G_0013": {
-      "lat": 1.514058637431465,
-      "lon": 103.65435631776076,
-      "floor": 0,
-      "floor_label": "G",
-      "type": "Corridor",
-      "name": null,
-      "lotno": null,
-      "category": null
-    },
-    "n_G_0014": {
-      "lat": 1.514078140168,
-      "lon": 103.6542027891236,
-      "floor": 0,
-      "floor_label": "G",
-      "type": "Corridor",
-      "name": null,
-      "lotno": null,
-      "category": null
-    },
-    "n_G_0015": {
-      "lat": 1.514086804045603,
-      "lon": 103.6541940384356,
-      "floor": 0,
-      "floor_label": "G",
-      "type": "Corridor",
-      "name": null,
-      "lotno": null,
-      "category": null
-    },
-    "n_G_0016": {
-      "lat": 1.51407150701364,
-      "lon": 103.6541793832105,
-      "floor": 0,
-      "floor_label": "G",
-      "type": "Shop",
-      "name": "7-Eleven",
-      "lotno": "G-03",
-      "category": "Convenience Store"
-    },
-    "n_G_0017": {
-      "lat": 1.514106128477465,
-      "lon": 103.65417452036444,
-      "floor": 0,
-      "floor_label": "G",
-      "type": "Shop",
-      "name": "Vanakam India",
-      "lotno": "G-01",
-      "category": null
-    },
-    "n_G_0018": {
-      "lat": 1.514145688296719,
-      "lon": 103.65426692749362,
-      "floor": 0,
-      "floor_label": "G",
-      "type": "Corridor",
-      "name": null,
-      "lotno": null,
-      "category": null
-    },
-    "n_G_0019": {
-      "lat": 1.514094308461037,
-      "lon": 103.65434486879745,
-      "floor": 0,
-      "floor_label": "G",
-      "type": "Toilet",
-      "name": null,
-      "lotno": null,
-      "category": null
-    },
-    "n_G_0020": {
-      "lat": 1.514088225392556,
-      "lon": 103.65436525092339,
-      "floor": 0,
-      "floor_label": "G",
-      "type": "Toilet",
-      "name": null,
-      "lotno": null,
-      "category": null
-    },
-    "n_G_0021": {
-      "lat": 1.514063331607154,
-      "lon": 103.6543912524333,
-      "floor": 0,
-      "floor_label": "G",
-      "type": "Toilet",
-      "name": null,
-      "lotno": null,
-      "category": null
-    },
-    "n_G_0022": {
-      "lat": 1.514119153978503,
-      "lon": 103.6540057229447,
-      "floor": 0,
-      "floor_label": "G",
-      "type": "Entrance",
-      "name": null,
-      "lotno": null,
-      "category": null
-    },
-    "n_G_0023": {
-      "lat": 1.514198951712623,
-      "lon": 103.65411132622866,
-      "floor": 0,
-      "floor_label": "G",
-      "type": "Entrance",
-      "name": null,
-      "lotno": null,
-      "category": null
-    },
-    "n_G_0024": {
-      "lat": 1.514140311915495,
-      "lon": 103.65420838597984,
-      "floor": 0,
-      "floor_label": "G",
-      "type": "Entrance",
-      "name": null,
-      "lotno": null,
-      "category": null
-    },
-    "n_G_0025": {
-      "lat": 1.514112802442499,
-      "lon": 103.6542359998692,
-      "floor": 0,
-      "floor_label": "G",
-      "type": "Corridor",
-      "name": null,
-      "lotno": null,
-      "category": null
-    },
-    "n_G_0026": {
-      "lat": 1.51392948380568,
-      "lon": 103.65464355797502,
-      "floor": 0,
-      "floor_label": "G",
-      "type": "Corridor",
-      "name": null,
-      "lotno": null,
-      "category": null
-    },
-    "n_G_0027": {
-      "lat": 1.514012755783011,
-      "lon": 103.65435835014792,
-      "floor": 0,
-      "floor_label": "G",
-      "type": "Corridor",
-      "name": null,
-      "lotno": null,
-      "category": null
-    },
-    "n_G_0028": {
-      "lat": 1.513983779614823,
-      "lon": 103.65433004338117,
-      "floor": 0,
-      "floor_label": "G",
-      "type": "Corridor",
-      "name": null,
-      "lotno": null,
-      "category": null
-    },
-    "n_G_0029": {
-      "lat": 1.51382654914021,
-      "lon": 103.65451720992145,
-      "floor": 0,
-      "floor_label": "G",
-      "type": "Corridor",
-      "name": null,
-      "lotno": null,
-      "category": null
-    },
-    "n_G_0030": {
-      "lat": 1.514002720058529,
-      "lon": 103.65434884879956,
-      "floor": 0,
-      "floor_label": "G",
-      "type": "Corridor",
-      "name": null,
-      "lotno": null,
-      "category": null
-    },
-    "n_G_0031": {
-      "lat": 1.513992801165738,
-      "lon": 103.6543392694438,
-      "floor": 0,
-      "floor_label": "G",
-      "type": "Corridor",
-      "name": null,
-      "lotno": null,
-      "category": null
-    },
     "n_1_0001": {
       "lat": 1.513863758413372,
       "lon": 103.65540544501673,
@@ -606,7 +296,7 @@
       "floor": 1,
       "floor_label": "1",
       "type": "Shop",
-      "name": "BL Home Living",
+      "name": "Maco Cafe",
       "lotno": "1-17",
       "category": "Homes"
     },
@@ -696,7 +386,7 @@
       "floor": 1,
       "floor_label": "1",
       "type": "Shop",
-      "name": "Squid Boy",
+      "name": "",
       "lotno": "1-28",
       "category": "Food and Beverages"
     },
@@ -1183,6 +873,86 @@
     "n_1_0088": {
       "lat": 1.513837586195328,
       "lon": 103.6552741940918,
+      "floor": 1,
+      "floor_label": "1",
+      "type": "Corridor",
+      "name": null,
+      "lotno": null,
+      "category": null
+    },
+    "n_1_0089": {
+      "lat": 1.514495540397525,
+      "lon": 103.65458983288094,
+      "floor": 1,
+      "floor_label": "1",
+      "type": "Shop",
+      "name": "Village Grocer",
+      "lotno": "1-30",
+      "category": "Grocery"
+    },
+    "n_1_0090": {
+      "lat": 1.514493350248404,
+      "lon": 103.65470568264385,
+      "floor": 1,
+      "floor_label": "1",
+      "type": "Shop",
+      "name": "Village Grocer",
+      "lotno": "1-30",
+      "category": "Grocery"
+    },
+    "n_1_0091": {
+      "lat": 1.51381800852591,
+      "lon": 103.65462595564871,
+      "floor": 1,
+      "floor_label": "1",
+      "type": "Shop",
+      "name": "Hijago",
+      "lotno": "1-44",
+      "category": "Food and Beverages"
+    },
+    "n_1_0092": {
+      "lat": 1.513836953877772,
+      "lon": 103.65460643077861,
+      "floor": 1,
+      "floor_label": "1",
+      "type": "Corridor",
+      "name": null,
+      "lotno": null,
+      "category": null
+    },
+    "n_1_0093": {
+      "lat": 1.514506290716874,
+      "lon": 103.65457874994809,
+      "floor": 1,
+      "floor_label": "1",
+      "type": "Corridor",
+      "name": null,
+      "lotno": null,
+      "category": null
+    },
+    "n_1_0094": {
+      "lat": 1.514514129154182,
+      "lon": 103.65472359613392,
+      "floor": 1,
+      "floor_label": "1",
+      "type": "Corridor",
+      "name": null,
+      "lotno": null,
+      "category": null
+    },
+    "n_1_0095": {
+      "lat": 1.513992328129819,
+      "lon": 103.65543210444471,
+      "floor": 1,
+      "floor_label": "1",
+      "type": "Shop",
+      "name": "CS Delicious Food Bite Snacks",
+      "lotno": "1-06",
+      "category": "Food and Beverages"
+    },
+    "n_1_0096": {
+      "lat": 1.513936082435442,
+      "lon": 103.65532962050281,
       "floor": 1,
       "floor_label": "1",
       "type": "Corridor",
@@ -2883,6 +2653,26 @@
     "n_2_0170": {
       "lat": 1.513934916518908,
       "lon": 103.65464907720387,
+      "floor": 2,
+      "floor_label": "2",
+      "type": "Corridor",
+      "name": null,
+      "lotno": null,
+      "category": null
+    },
+    "n_2_0171": {
+      "lat": 1.514108573656405,
+      "lon": 103.65586655306147,
+      "floor": 2,
+      "floor_label": "2",
+      "type": "Shop",
+      "name": "HONOR Concept Store",
+      "lotno": "2-31",
+      "category": "Digital and Gadget"
+    },
+    "n_2_0172": {
+      "lat": 1.514136845104529,
+      "lon": 103.65589327815886,
       "floor": 2,
       "floor_label": "2",
       "type": "Corridor",
@@ -4650,6 +4440,316 @@
       "lotno": null,
       "category": null
     },
+    "n_G_0001": {
+      "lat": 1.513851617169215,
+      "lon": 103.65468819288152,
+      "floor": 0,
+      "floor_label": "G",
+      "type": "Entrance",
+      "name": null,
+      "lotno": null,
+      "category": null
+    },
+    "n_G_0002": {
+      "lat": 1.513889007922556,
+      "lon": 103.65464913986767,
+      "floor": 0,
+      "floor_label": "G",
+      "type": "Corridor",
+      "name": null,
+      "lotno": null,
+      "category": null
+    },
+    "n_G_0003": {
+      "lat": 1.513770890765671,
+      "lon": 103.65453597011818,
+      "floor": 0,
+      "floor_label": "G",
+      "type": "Corridor",
+      "name": null,
+      "lotno": null,
+      "category": null
+    },
+    "n_G_0004": {
+      "lat": 1.513754989932481,
+      "lon": 103.65455257890365,
+      "floor": 0,
+      "floor_label": "G",
+      "type": "Shop",
+      "name": "La Primeur",
+      "lotno": "G-11",
+      "category": "Food and Beverage"
+    },
+    "n_G_0005": {
+      "lat": 1.513735795570471,
+      "lon": 103.654463086093,
+      "floor": 0,
+      "floor_label": "G",
+      "type": "Entrance",
+      "name": null,
+      "lotno": null,
+      "category": null
+    },
+    "n_G_0006": {
+      "lat": 1.51379049523869,
+      "lon": 103.65451549279571,
+      "floor": 0,
+      "floor_label": "G",
+      "type": "Corridor",
+      "name": null,
+      "lotno": null,
+      "category": null
+    },
+    "n_G_0007": {
+      "lat": 1.513810574359683,
+      "lon": 103.65453473023001,
+      "floor": 0,
+      "floor_label": "G",
+      "type": "Corridor",
+      "name": null,
+      "lotno": null,
+      "category": null
+    },
+    "n_G_0008": {
+      "lat": 1.513929065246122,
+      "lon": 103.65436184935501,
+      "floor": 0,
+      "floor_label": "G",
+      "type": "Shop",
+      "name": "80's 90's",
+      "lotno": "G-07",
+      "category": "Food and Beverage"
+    },
+    "n_G_0009": {
+      "lat": 1.513953595997037,
+      "lon": 103.6543853527139,
+      "floor": 0,
+      "floor_label": "G",
+      "type": "Corridor",
+      "name": null,
+      "lotno": null,
+      "category": null
+    },
+    "n_G_0010": {
+      "lat": 1.513962419204179,
+      "lon": 103.65437613740328,
+      "floor": 0,
+      "floor_label": "G",
+      "type": "Corridor",
+      "name": null,
+      "lotno": null,
+      "category": null
+    },
+    "n_G_0011": {
+      "lat": 1.513986950352254,
+      "lon": 103.65439963981021,
+      "floor": 0,
+      "floor_label": "G",
+      "type": "Shop",
+      "name": "Wa Cee",
+      "lotno": "G-16",
+      "category": null
+    },
+    "n_G_0012": {
+      "lat": 1.513995285709141,
+      "lon": 103.65434181030992,
+      "floor": 0,
+      "floor_label": "G",
+      "type": "Corridor",
+      "name": null,
+      "lotno": null,
+      "category": null
+    },
+    "n_G_0013": {
+      "lat": 1.514058637431465,
+      "lon": 103.65435631776076,
+      "floor": 0,
+      "floor_label": "G",
+      "type": "Corridor",
+      "name": null,
+      "lotno": null,
+      "category": null
+    },
+    "n_G_0014": {
+      "lat": 1.514078140168,
+      "lon": 103.6542027891236,
+      "floor": 0,
+      "floor_label": "G",
+      "type": "Corridor",
+      "name": null,
+      "lotno": null,
+      "category": null
+    },
+    "n_G_0015": {
+      "lat": 1.514086804045603,
+      "lon": 103.6541940384356,
+      "floor": 0,
+      "floor_label": "G",
+      "type": "Corridor",
+      "name": null,
+      "lotno": null,
+      "category": null
+    },
+    "n_G_0016": {
+      "lat": 1.51407150701364,
+      "lon": 103.6541793832105,
+      "floor": 0,
+      "floor_label": "G",
+      "type": "Shop",
+      "name": "7-Eleven",
+      "lotno": "G-03",
+      "category": "Convenience Store"
+    },
+    "n_G_0017": {
+      "lat": 1.514106128477465,
+      "lon": 103.65417452036444,
+      "floor": 0,
+      "floor_label": "G",
+      "type": "Shop",
+      "name": "Vanakam India",
+      "lotno": "G-01",
+      "category": null
+    },
+    "n_G_0018": {
+      "lat": 1.514145688296719,
+      "lon": 103.65426692749362,
+      "floor": 0,
+      "floor_label": "G",
+      "type": "Corridor",
+      "name": null,
+      "lotno": null,
+      "category": null
+    },
+    "n_G_0019": {
+      "lat": 1.514094308461037,
+      "lon": 103.65434486879745,
+      "floor": 0,
+      "floor_label": "G",
+      "type": "Toilet",
+      "name": null,
+      "lotno": null,
+      "category": null
+    },
+    "n_G_0020": {
+      "lat": 1.514088225392556,
+      "lon": 103.65436525092339,
+      "floor": 0,
+      "floor_label": "G",
+      "type": "Toilet",
+      "name": null,
+      "lotno": null,
+      "category": null
+    },
+    "n_G_0021": {
+      "lat": 1.514063331607154,
+      "lon": 103.6543912524333,
+      "floor": 0,
+      "floor_label": "G",
+      "type": "Toilet",
+      "name": null,
+      "lotno": null,
+      "category": null
+    },
+    "n_G_0022": {
+      "lat": 1.514119153978503,
+      "lon": 103.6540057229447,
+      "floor": 0,
+      "floor_label": "G",
+      "type": "Entrance",
+      "name": null,
+      "lotno": null,
+      "category": null
+    },
+    "n_G_0023": {
+      "lat": 1.514198951712623,
+      "lon": 103.65411132622866,
+      "floor": 0,
+      "floor_label": "G",
+      "type": "Entrance",
+      "name": null,
+      "lotno": null,
+      "category": null
+    },
+    "n_G_0024": {
+      "lat": 1.514140311915495,
+      "lon": 103.65420838597984,
+      "floor": 0,
+      "floor_label": "G",
+      "type": "Entrance",
+      "name": null,
+      "lotno": null,
+      "category": null
+    },
+    "n_G_0025": {
+      "lat": 1.514112802442499,
+      "lon": 103.6542359998692,
+      "floor": 0,
+      "floor_label": "G",
+      "type": "Corridor",
+      "name": null,
+      "lotno": null,
+      "category": null
+    },
+    "n_G_0026": {
+      "lat": 1.51392948380568,
+      "lon": 103.65464355797502,
+      "floor": 0,
+      "floor_label": "G",
+      "type": "Corridor",
+      "name": null,
+      "lotno": null,
+      "category": null
+    },
+    "n_G_0027": {
+      "lat": 1.514012755783011,
+      "lon": 103.65435835014792,
+      "floor": 0,
+      "floor_label": "G",
+      "type": "Corridor",
+      "name": null,
+      "lotno": null,
+      "category": null
+    },
+    "n_G_0028": {
+      "lat": 1.513983779614823,
+      "lon": 103.65433004338117,
+      "floor": 0,
+      "floor_label": "G",
+      "type": "Corridor",
+      "name": null,
+      "lotno": null,
+      "category": null
+    },
+    "n_G_0029": {
+      "lat": 1.51382654914021,
+      "lon": 103.65451720992145,
+      "floor": 0,
+      "floor_label": "G",
+      "type": "Corridor",
+      "name": null,
+      "lotno": null,
+      "category": null
+    },
+    "n_G_0030": {
+      "lat": 1.514002720058529,
+      "lon": 103.65434884879956,
+      "floor": 0,
+      "floor_label": "G",
+      "type": "Corridor",
+      "name": null,
+      "lotno": null,
+      "category": null
+    },
+    "n_G_0031": {
+      "lat": 1.513992801165738,
+      "lon": 103.6543392694438,
+      "floor": 0,
+      "floor_label": "G",
+      "type": "Corridor",
+      "name": null,
+      "lotno": null,
+      "category": null
+    },
     "n_1_0074_E": {
       "lat": 1.513938230479096,
       "lon": 103.65462420776859,
@@ -5783,552 +5883,6 @@
   },
   "edges": [
     {
-      "from": "n_G_0005",
-      "to": "n_G_0006",
-      "weight": 8.402,
-      "type": "walk",
-      "accessible": 1
-    },
-    {
-      "from": "n_G_0006",
-      "to": "n_G_0005",
-      "weight": 8.402,
-      "type": "walk",
-      "accessible": 1
-    },
-    {
-      "from": "n_G_0006",
-      "to": "n_G_0003",
-      "weight": 3.145,
-      "type": "walk",
-      "accessible": 1
-    },
-    {
-      "from": "n_G_0003",
-      "to": "n_G_0006",
-      "weight": 3.145,
-      "type": "walk",
-      "accessible": 1
-    },
-    {
-      "from": "n_G_0003",
-      "to": "n_G_0004",
-      "weight": 2.551,
-      "type": "walk",
-      "accessible": 1
-    },
-    {
-      "from": "n_G_0004",
-      "to": "n_G_0003",
-      "weight": 2.551,
-      "type": "walk",
-      "accessible": 1
-    },
-    {
-      "from": "n_G_0003",
-      "to": "n_G_0002",
-      "weight": 18.143,
-      "type": "walk",
-      "accessible": 1
-    },
-    {
-      "from": "n_G_0002",
-      "to": "n_G_0003",
-      "weight": 18.143,
-      "type": "walk",
-      "accessible": 1
-    },
-    {
-      "from": "n_G_0002",
-      "to": "n_G_0001",
-      "weight": 5.998,
-      "type": "walk",
-      "accessible": 1
-    },
-    {
-      "from": "n_G_0001",
-      "to": "n_G_0002",
-      "weight": 5.998,
-      "type": "walk",
-      "accessible": 1
-    },
-    {
-      "from": "n_G_0003_L",
-      "to": "n_G_0026",
-      "weight": 6.887,
-      "type": "walk",
-      "accessible": 1
-    },
-    {
-      "from": "n_G_0026",
-      "to": "n_G_0003_L",
-      "weight": 6.887,
-      "type": "walk",
-      "accessible": 1
-    },
-    {
-      "from": "n_G_0006",
-      "to": "n_G_0007",
-      "weight": 3.084,
-      "type": "walk",
-      "accessible": 1
-    },
-    {
-      "from": "n_G_0007",
-      "to": "n_G_0006",
-      "weight": 3.084,
-      "type": "walk",
-      "accessible": 1
-    },
-    {
-      "from": "n_G_0029",
-      "to": "n_G_0009",
-      "weight": 20.314,
-      "type": "walk",
-      "accessible": 1
-    },
-    {
-      "from": "n_G_0009",
-      "to": "n_G_0029",
-      "weight": 20.314,
-      "type": "walk",
-      "accessible": 1
-    },
-    {
-      "from": "n_G_0008",
-      "to": "n_G_0009",
-      "weight": 3.768,
-      "type": "walk",
-      "accessible": 1
-    },
-    {
-      "from": "n_G_0009",
-      "to": "n_G_0008",
-      "weight": 3.768,
-      "type": "walk",
-      "accessible": 1
-    },
-    {
-      "from": "n_G_0009",
-      "to": "n_G_0010",
-      "weight": 1.415,
-      "type": "walk",
-      "accessible": 1
-    },
-    {
-      "from": "n_G_0010",
-      "to": "n_G_0009",
-      "weight": 1.415,
-      "type": "walk",
-      "accessible": 1
-    },
-    {
-      "from": "n_G_0010",
-      "to": "n_G_0011",
-      "weight": 3.768,
-      "type": "walk",
-      "accessible": 1
-    },
-    {
-      "from": "n_G_0011",
-      "to": "n_G_0010",
-      "weight": 3.768,
-      "type": "walk",
-      "accessible": 1
-    },
-    {
-      "from": "n_G_0010",
-      "to": "n_G_0012",
-      "weight": 5.273,
-      "type": "walk",
-      "accessible": 1
-    },
-    {
-      "from": "n_G_0012",
-      "to": "n_G_0010",
-      "weight": 5.273,
-      "type": "walk",
-      "accessible": 1
-    },
-    {
-      "from": "n_G_0028",
-      "to": "n_G_0014",
-      "weight": 21.418,
-      "type": "walk",
-      "accessible": 1
-    },
-    {
-      "from": "n_G_0014",
-      "to": "n_G_0028",
-      "weight": 21.418,
-      "type": "walk",
-      "accessible": 1
-    },
-    {
-      "from": "n_G_0014",
-      "to": "n_G_0015",
-      "weight": 1.366,
-      "type": "walk",
-      "accessible": 1
-    },
-    {
-      "from": "n_G_0015",
-      "to": "n_G_0014",
-      "weight": 1.366,
-      "type": "walk",
-      "accessible": 1
-    },
-    {
-      "from": "n_G_0016",
-      "to": "n_G_0015",
-      "weight": 2.35,
-      "type": "walk",
-      "accessible": 1
-    },
-    {
-      "from": "n_G_0015",
-      "to": "n_G_0016",
-      "weight": 2.35,
-      "type": "walk",
-      "accessible": 1
-    },
-    {
-      "from": "n_G_0017",
-      "to": "n_G_0015",
-      "weight": 3.047,
-      "type": "walk",
-      "accessible": 1
-    },
-    {
-      "from": "n_G_0015",
-      "to": "n_G_0017",
-      "weight": 3.047,
-      "type": "walk",
-      "accessible": 1
-    },
-    {
-      "from": "n_G_0014",
-      "to": "n_G_0025",
-      "weight": 5.324,
-      "type": "walk",
-      "accessible": 1
-    },
-    {
-      "from": "n_G_0025",
-      "to": "n_G_0014",
-      "weight": 5.324,
-      "type": "walk",
-      "accessible": 1
-    },
-    {
-      "from": "n_G_0018",
-      "to": "n_G_0013",
-      "weight": 13.842,
-      "type": "walk",
-      "accessible": 1
-    },
-    {
-      "from": "n_G_0013",
-      "to": "n_G_0018",
-      "weight": 13.842,
-      "type": "walk",
-      "accessible": 1
-    },
-    {
-      "from": "n_G_0027",
-      "to": "n_G_0013",
-      "weight": 7.138,
-      "type": "walk",
-      "accessible": 1
-    },
-    {
-      "from": "n_G_0013",
-      "to": "n_G_0027",
-      "weight": 7.138,
-      "type": "walk",
-      "accessible": 1
-    },
-    {
-      "from": "n_G_0013",
-      "to": "n_G_0020",
-      "weight": 4.611,
-      "type": "walk",
-      "accessible": 1
-    },
-    {
-      "from": "n_G_0020",
-      "to": "n_G_0013",
-      "weight": 4.611,
-      "type": "walk",
-      "accessible": 1
-    },
-    {
-      "from": "n_G_0013",
-      "to": "n_G_0021",
-      "weight": 5.494,
-      "type": "walk",
-      "accessible": 1
-    },
-    {
-      "from": "n_G_0021",
-      "to": "n_G_0013",
-      "weight": 5.494,
-      "type": "walk",
-      "accessible": 1
-    },
-    {
-      "from": "n_G_0013",
-      "to": "n_G_0019",
-      "weight": 5.635,
-      "type": "walk",
-      "accessible": 1
-    },
-    {
-      "from": "n_G_0019",
-      "to": "n_G_0013",
-      "weight": 5.635,
-      "type": "walk",
-      "accessible": 1
-    },
-    {
-      "from": "n_G_0022",
-      "to": "n_G_0024_L",
-      "weight": 5.152,
-      "type": "walk",
-      "accessible": 1
-    },
-    {
-      "from": "n_G_0024_L",
-      "to": "n_G_0022",
-      "weight": 5.152,
-      "type": "walk",
-      "accessible": 1
-    },
-    {
-      "from": "n_G_0022",
-      "to": "n_G_0023",
-      "weight": 16.828,
-      "type": "walk",
-      "accessible": 1
-    },
-    {
-      "from": "n_G_0023",
-      "to": "n_G_0022",
-      "weight": 16.828,
-      "type": "walk",
-      "accessible": 1
-    },
-    {
-      "from": "n_G_0023",
-      "to": "n_G_0024",
-      "weight": 15.023,
-      "type": "walk",
-      "accessible": 1
-    },
-    {
-      "from": "n_G_0024",
-      "to": "n_G_0023",
-      "weight": 15.023,
-      "type": "walk",
-      "accessible": 1
-    },
-    {
-      "from": "n_G_0024",
-      "to": "n_G_0025",
-      "weight": 4.324,
-      "type": "walk",
-      "accessible": 1
-    },
-    {
-      "from": "n_G_0025",
-      "to": "n_G_0024",
-      "weight": 4.324,
-      "type": "walk",
-      "accessible": 1
-    },
-    {
-      "from": "n_G_0025",
-      "to": "n_G_0018",
-      "weight": 5.007,
-      "type": "walk",
-      "accessible": 1
-    },
-    {
-      "from": "n_G_0018",
-      "to": "n_G_0025",
-      "weight": 5.007,
-      "type": "walk",
-      "accessible": 1
-    },
-    {
-      "from": "n_G_0026",
-      "to": "n_G_0002",
-      "weight": 4.78,
-      "type": "walk",
-      "accessible": 1
-    },
-    {
-      "from": "n_G_0002",
-      "to": "n_G_0026",
-      "weight": 4.78,
-      "type": "walk",
-      "accessible": 1
-    },
-    {
-      "from": "n_G_0026",
-      "to": "n_G_0029_E",
-      "weight": 0.781,
-      "type": "walk",
-      "accessible": 1
-    },
-    {
-      "from": "n_G_0029_E",
-      "to": "n_G_0026",
-      "weight": 0.781,
-      "type": "walk",
-      "accessible": 1
-    },
-    {
-      "from": "n_G_0031",
-      "to": "n_G_0028",
-      "weight": 1.432,
-      "type": "walk",
-      "accessible": 1
-    },
-    {
-      "from": "n_G_0028",
-      "to": "n_G_0031",
-      "weight": 1.432,
-      "type": "walk",
-      "accessible": 1
-    },
-    {
-      "from": "n_G_0030",
-      "to": "n_G_0027",
-      "weight": 1.52,
-      "type": "walk",
-      "accessible": 1
-    },
-    {
-      "from": "n_G_0027",
-      "to": "n_G_0030",
-      "weight": 1.52,
-      "type": "walk",
-      "accessible": 1
-    },
-    {
-      "from": "n_G_0027",
-      "to": "n_G_0034_E",
-      "weight": 0.818,
-      "type": "walk",
-      "accessible": 1
-    },
-    {
-      "from": "n_G_0034_E",
-      "to": "n_G_0027",
-      "weight": 0.818,
-      "type": "walk",
-      "accessible": 1
-    },
-    {
-      "from": "n_G_0007",
-      "to": "n_G_0029",
-      "weight": 2.63,
-      "type": "walk",
-      "accessible": 1
-    },
-    {
-      "from": "n_G_0029",
-      "to": "n_G_0007",
-      "weight": 2.63,
-      "type": "walk",
-      "accessible": 1
-    },
-    {
-      "from": "n_G_0029",
-      "to": "n_G_0028_E",
-      "weight": 2.066,
-      "type": "walk",
-      "accessible": 1
-    },
-    {
-      "from": "n_G_0028_E",
-      "to": "n_G_0029",
-      "weight": 2.066,
-      "type": "walk",
-      "accessible": 1
-    },
-    {
-      "from": "n_G_0028",
-      "to": "n_G_0033_E",
-      "weight": 0.742,
-      "type": "walk",
-      "accessible": 1
-    },
-    {
-      "from": "n_G_0033_E",
-      "to": "n_G_0028",
-      "weight": 0.742,
-      "type": "walk",
-      "accessible": 1
-    },
-    {
-      "from": "n_G_0031",
-      "to": "n_G_0032_E",
-      "weight": 0.799,
-      "type": "walk",
-      "accessible": 1
-    },
-    {
-      "from": "n_G_0032_E",
-      "to": "n_G_0031",
-      "weight": 0.799,
-      "type": "walk",
-      "accessible": 1
-    },
-    {
-      "from": "n_G_0030",
-      "to": "n_G_0031_E",
-      "weight": 0.815,
-      "type": "walk",
-      "accessible": 1
-    },
-    {
-      "from": "n_G_0031_E",
-      "to": "n_G_0030",
-      "weight": 0.815,
-      "type": "walk",
-      "accessible": 1
-    },
-    {
-      "from": "n_G_0012",
-      "to": "n_G_0031",
-      "weight": 0.394,
-      "type": "walk",
-      "accessible": 1
-    },
-    {
-      "from": "n_G_0031",
-      "to": "n_G_0012",
-      "weight": 0.394,
-      "type": "walk",
-      "accessible": 1
-    },
-    {
-      "from": "n_G_0012",
-      "to": "n_G_0030",
-      "weight": 1.149,
-      "type": "walk",
-      "accessible": 1
-    },
-    {
-      "from": "n_G_0030",
-      "to": "n_G_0012",
-      "weight": 1.149,
-      "type": "walk",
-      "accessible": 1
-    },
-    {
       "from": "n_1_0003",
       "to": "n_1_0004",
       "weight": 7.485,
@@ -6441,16 +5995,16 @@
       "accessible": 1
     },
     {
-      "from": "n_1_0057",
+      "from": "n_1_0096",
       "to": "n_1_0001",
-      "weight": 16.193,
+      "weight": 11.626,
       "type": "walk",
       "accessible": 1
     },
     {
       "from": "n_1_0001",
-      "to": "n_1_0057",
-      "weight": 16.193,
+      "to": "n_1_0096",
+      "weight": 11.626,
       "type": "walk",
       "accessible": 1
     },
@@ -7113,16 +6667,16 @@
       "accessible": 1
     },
     {
-      "from": "n_1_0031",
+      "from": "n_1_0094",
       "to": "n_1_0060",
-      "weight": 10.494,
+      "weight": 9.188,
       "type": "walk",
       "accessible": 1
     },
     {
       "from": "n_1_0060",
-      "to": "n_1_0031",
-      "weight": 10.494,
+      "to": "n_1_0094",
+      "weight": 9.188,
       "type": "walk",
       "accessible": 1
     },
@@ -7212,15 +6766,15 @@
     },
     {
       "from": "n_1_0068",
-      "to": "n_1_0050",
-      "weight": 23.529,
+      "to": "n_1_0092",
+      "weight": 19.737,
       "type": "walk",
       "accessible": 1
     },
     {
-      "from": "n_1_0050",
+      "from": "n_1_0092",
       "to": "n_1_0068",
-      "weight": 23.529,
+      "weight": 19.737,
       "type": "walk",
       "accessible": 1
     },
@@ -7506,15 +7060,15 @@
     },
     {
       "from": "n_1_0072",
-      "to": "n_1_0060",
-      "weight": 25.274,
+      "to": "n_1_0093",
+      "weight": 13.185,
       "type": "walk",
       "accessible": 1
     },
     {
-      "from": "n_1_0060",
+      "from": "n_1_0093",
       "to": "n_1_0072",
-      "weight": 25.274,
+      "weight": 13.185,
       "type": "walk",
       "accessible": 1
     },
@@ -8005,6 +7559,118 @@
       "from": "n_1_0070_E",
       "to": "n_1_0087",
       "weight": 2.533,
+      "type": "walk",
+      "accessible": 1
+    },
+    {
+      "from": "n_1_0092",
+      "to": "n_1_0091",
+      "weight": 3.018,
+      "type": "walk",
+      "accessible": 1
+    },
+    {
+      "from": "n_1_0091",
+      "to": "n_1_0092",
+      "weight": 3.018,
+      "type": "walk",
+      "accessible": 1
+    },
+    {
+      "from": "n_1_0092",
+      "to": "n_1_0050",
+      "weight": 3.792,
+      "type": "walk",
+      "accessible": 1
+    },
+    {
+      "from": "n_1_0050",
+      "to": "n_1_0092",
+      "weight": 3.792,
+      "type": "walk",
+      "accessible": 1
+    },
+    {
+      "from": "n_1_0089",
+      "to": "n_1_0093",
+      "weight": 1.713,
+      "type": "walk",
+      "accessible": 1
+    },
+    {
+      "from": "n_1_0093",
+      "to": "n_1_0089",
+      "weight": 1.713,
+      "type": "walk",
+      "accessible": 1
+    },
+    {
+      "from": "n_1_0090",
+      "to": "n_1_0094",
+      "weight": 3.042,
+      "type": "walk",
+      "accessible": 1
+    },
+    {
+      "from": "n_1_0094",
+      "to": "n_1_0090",
+      "weight": 3.042,
+      "type": "walk",
+      "accessible": 1
+    },
+    {
+      "from": "n_1_0093",
+      "to": "n_1_0060",
+      "weight": 12.09,
+      "type": "walk",
+      "accessible": 1
+    },
+    {
+      "from": "n_1_0060",
+      "to": "n_1_0093",
+      "weight": 12.09,
+      "type": "walk",
+      "accessible": 1
+    },
+    {
+      "from": "n_1_0031",
+      "to": "n_1_0094",
+      "weight": 1.306,
+      "type": "walk",
+      "accessible": 1
+    },
+    {
+      "from": "n_1_0094",
+      "to": "n_1_0031",
+      "weight": 1.306,
+      "type": "walk",
+      "accessible": 1
+    },
+    {
+      "from": "n_1_0095",
+      "to": "n_1_0096",
+      "weight": 16.286,
+      "type": "walk",
+      "accessible": 1
+    },
+    {
+      "from": "n_1_0096",
+      "to": "n_1_0095",
+      "weight": 16.286,
+      "type": "walk",
+      "accessible": 1
+    },
+    {
+      "from": "n_1_0057",
+      "to": "n_1_0096",
+      "weight": 4.567,
+      "type": "walk",
+      "accessible": 1
+    },
+    {
+      "from": "n_1_0096",
+      "to": "n_1_0057",
+      "weight": 4.567,
       "type": "walk",
       "accessible": 1
     },
@@ -8835,16 +8501,16 @@
       "accessible": 1
     },
     {
-      "from": "n_2_0040",
+      "from": "n_2_0172",
       "to": "n_2_0042",
-      "weight": 5.514,
+      "weight": 4.397,
       "type": "walk",
       "accessible": 1
     },
     {
       "from": "n_2_0042",
-      "to": "n_2_0040",
-      "weight": 5.514,
+      "to": "n_2_0172",
+      "weight": 4.397,
       "type": "walk",
       "accessible": 1
     },
@@ -11071,6 +10737,34 @@
       "from": "n_2_0165",
       "to": "n_2_0166",
       "weight": 2.192,
+      "type": "walk",
+      "accessible": 1
+    },
+    {
+      "from": "n_2_0171",
+      "to": "n_2_0172",
+      "weight": 4.315,
+      "type": "walk",
+      "accessible": 1
+    },
+    {
+      "from": "n_2_0172",
+      "to": "n_2_0171",
+      "weight": 4.315,
+      "type": "walk",
+      "accessible": 1
+    },
+    {
+      "from": "n_2_0040",
+      "to": "n_2_0172",
+      "weight": 1.117,
+      "type": "walk",
+      "accessible": 1
+    },
+    {
+      "from": "n_2_0172",
+      "to": "n_2_0040",
+      "weight": 1.117,
       "type": "walk",
       "accessible": 1
     },
@@ -14543,6 +14237,552 @@
       "from": "n_5_0004",
       "to": "n_5_0001",
       "weight": 3.938,
+      "type": "walk",
+      "accessible": 1
+    },
+    {
+      "from": "n_G_0005",
+      "to": "n_G_0006",
+      "weight": 8.402,
+      "type": "walk",
+      "accessible": 1
+    },
+    {
+      "from": "n_G_0006",
+      "to": "n_G_0005",
+      "weight": 8.402,
+      "type": "walk",
+      "accessible": 1
+    },
+    {
+      "from": "n_G_0006",
+      "to": "n_G_0003",
+      "weight": 3.145,
+      "type": "walk",
+      "accessible": 1
+    },
+    {
+      "from": "n_G_0003",
+      "to": "n_G_0006",
+      "weight": 3.145,
+      "type": "walk",
+      "accessible": 1
+    },
+    {
+      "from": "n_G_0003",
+      "to": "n_G_0004",
+      "weight": 2.551,
+      "type": "walk",
+      "accessible": 1
+    },
+    {
+      "from": "n_G_0004",
+      "to": "n_G_0003",
+      "weight": 2.551,
+      "type": "walk",
+      "accessible": 1
+    },
+    {
+      "from": "n_G_0003",
+      "to": "n_G_0002",
+      "weight": 18.143,
+      "type": "walk",
+      "accessible": 1
+    },
+    {
+      "from": "n_G_0002",
+      "to": "n_G_0003",
+      "weight": 18.143,
+      "type": "walk",
+      "accessible": 1
+    },
+    {
+      "from": "n_G_0002",
+      "to": "n_G_0001",
+      "weight": 5.998,
+      "type": "walk",
+      "accessible": 1
+    },
+    {
+      "from": "n_G_0001",
+      "to": "n_G_0002",
+      "weight": 5.998,
+      "type": "walk",
+      "accessible": 1
+    },
+    {
+      "from": "n_G_0003_L",
+      "to": "n_G_0026",
+      "weight": 6.887,
+      "type": "walk",
+      "accessible": 1
+    },
+    {
+      "from": "n_G_0026",
+      "to": "n_G_0003_L",
+      "weight": 6.887,
+      "type": "walk",
+      "accessible": 1
+    },
+    {
+      "from": "n_G_0006",
+      "to": "n_G_0007",
+      "weight": 3.084,
+      "type": "walk",
+      "accessible": 1
+    },
+    {
+      "from": "n_G_0007",
+      "to": "n_G_0006",
+      "weight": 3.084,
+      "type": "walk",
+      "accessible": 1
+    },
+    {
+      "from": "n_G_0029",
+      "to": "n_G_0009",
+      "weight": 20.314,
+      "type": "walk",
+      "accessible": 1
+    },
+    {
+      "from": "n_G_0009",
+      "to": "n_G_0029",
+      "weight": 20.314,
+      "type": "walk",
+      "accessible": 1
+    },
+    {
+      "from": "n_G_0008",
+      "to": "n_G_0009",
+      "weight": 3.768,
+      "type": "walk",
+      "accessible": 1
+    },
+    {
+      "from": "n_G_0009",
+      "to": "n_G_0008",
+      "weight": 3.768,
+      "type": "walk",
+      "accessible": 1
+    },
+    {
+      "from": "n_G_0009",
+      "to": "n_G_0010",
+      "weight": 1.415,
+      "type": "walk",
+      "accessible": 1
+    },
+    {
+      "from": "n_G_0010",
+      "to": "n_G_0009",
+      "weight": 1.415,
+      "type": "walk",
+      "accessible": 1
+    },
+    {
+      "from": "n_G_0010",
+      "to": "n_G_0011",
+      "weight": 3.768,
+      "type": "walk",
+      "accessible": 1
+    },
+    {
+      "from": "n_G_0011",
+      "to": "n_G_0010",
+      "weight": 3.768,
+      "type": "walk",
+      "accessible": 1
+    },
+    {
+      "from": "n_G_0010",
+      "to": "n_G_0012",
+      "weight": 5.273,
+      "type": "walk",
+      "accessible": 1
+    },
+    {
+      "from": "n_G_0012",
+      "to": "n_G_0010",
+      "weight": 5.273,
+      "type": "walk",
+      "accessible": 1
+    },
+    {
+      "from": "n_G_0028",
+      "to": "n_G_0014",
+      "weight": 21.418,
+      "type": "walk",
+      "accessible": 1
+    },
+    {
+      "from": "n_G_0014",
+      "to": "n_G_0028",
+      "weight": 21.418,
+      "type": "walk",
+      "accessible": 1
+    },
+    {
+      "from": "n_G_0014",
+      "to": "n_G_0015",
+      "weight": 1.366,
+      "type": "walk",
+      "accessible": 1
+    },
+    {
+      "from": "n_G_0015",
+      "to": "n_G_0014",
+      "weight": 1.366,
+      "type": "walk",
+      "accessible": 1
+    },
+    {
+      "from": "n_G_0016",
+      "to": "n_G_0015",
+      "weight": 2.35,
+      "type": "walk",
+      "accessible": 1
+    },
+    {
+      "from": "n_G_0015",
+      "to": "n_G_0016",
+      "weight": 2.35,
+      "type": "walk",
+      "accessible": 1
+    },
+    {
+      "from": "n_G_0017",
+      "to": "n_G_0015",
+      "weight": 3.047,
+      "type": "walk",
+      "accessible": 1
+    },
+    {
+      "from": "n_G_0015",
+      "to": "n_G_0017",
+      "weight": 3.047,
+      "type": "walk",
+      "accessible": 1
+    },
+    {
+      "from": "n_G_0014",
+      "to": "n_G_0025",
+      "weight": 5.324,
+      "type": "walk",
+      "accessible": 1
+    },
+    {
+      "from": "n_G_0025",
+      "to": "n_G_0014",
+      "weight": 5.324,
+      "type": "walk",
+      "accessible": 1
+    },
+    {
+      "from": "n_G_0018",
+      "to": "n_G_0013",
+      "weight": 13.842,
+      "type": "walk",
+      "accessible": 1
+    },
+    {
+      "from": "n_G_0013",
+      "to": "n_G_0018",
+      "weight": 13.842,
+      "type": "walk",
+      "accessible": 1
+    },
+    {
+      "from": "n_G_0027",
+      "to": "n_G_0013",
+      "weight": 7.138,
+      "type": "walk",
+      "accessible": 1
+    },
+    {
+      "from": "n_G_0013",
+      "to": "n_G_0027",
+      "weight": 7.138,
+      "type": "walk",
+      "accessible": 1
+    },
+    {
+      "from": "n_G_0013",
+      "to": "n_G_0020",
+      "weight": 4.611,
+      "type": "walk",
+      "accessible": 1
+    },
+    {
+      "from": "n_G_0020",
+      "to": "n_G_0013",
+      "weight": 4.611,
+      "type": "walk",
+      "accessible": 1
+    },
+    {
+      "from": "n_G_0013",
+      "to": "n_G_0021",
+      "weight": 5.494,
+      "type": "walk",
+      "accessible": 1
+    },
+    {
+      "from": "n_G_0021",
+      "to": "n_G_0013",
+      "weight": 5.494,
+      "type": "walk",
+      "accessible": 1
+    },
+    {
+      "from": "n_G_0013",
+      "to": "n_G_0019",
+      "weight": 5.635,
+      "type": "walk",
+      "accessible": 1
+    },
+    {
+      "from": "n_G_0019",
+      "to": "n_G_0013",
+      "weight": 5.635,
+      "type": "walk",
+      "accessible": 1
+    },
+    {
+      "from": "n_G_0022",
+      "to": "n_G_0024_L",
+      "weight": 5.152,
+      "type": "walk",
+      "accessible": 1
+    },
+    {
+      "from": "n_G_0024_L",
+      "to": "n_G_0022",
+      "weight": 5.152,
+      "type": "walk",
+      "accessible": 1
+    },
+    {
+      "from": "n_G_0022",
+      "to": "n_G_0023",
+      "weight": 16.828,
+      "type": "walk",
+      "accessible": 1
+    },
+    {
+      "from": "n_G_0023",
+      "to": "n_G_0022",
+      "weight": 16.828,
+      "type": "walk",
+      "accessible": 1
+    },
+    {
+      "from": "n_G_0023",
+      "to": "n_G_0024",
+      "weight": 15.023,
+      "type": "walk",
+      "accessible": 1
+    },
+    {
+      "from": "n_G_0024",
+      "to": "n_G_0023",
+      "weight": 15.023,
+      "type": "walk",
+      "accessible": 1
+    },
+    {
+      "from": "n_G_0024",
+      "to": "n_G_0025",
+      "weight": 4.324,
+      "type": "walk",
+      "accessible": 1
+    },
+    {
+      "from": "n_G_0025",
+      "to": "n_G_0024",
+      "weight": 4.324,
+      "type": "walk",
+      "accessible": 1
+    },
+    {
+      "from": "n_G_0025",
+      "to": "n_G_0018",
+      "weight": 5.007,
+      "type": "walk",
+      "accessible": 1
+    },
+    {
+      "from": "n_G_0018",
+      "to": "n_G_0025",
+      "weight": 5.007,
+      "type": "walk",
+      "accessible": 1
+    },
+    {
+      "from": "n_G_0026",
+      "to": "n_G_0002",
+      "weight": 4.78,
+      "type": "walk",
+      "accessible": 1
+    },
+    {
+      "from": "n_G_0002",
+      "to": "n_G_0026",
+      "weight": 4.78,
+      "type": "walk",
+      "accessible": 1
+    },
+    {
+      "from": "n_G_0026",
+      "to": "n_G_0029_E",
+      "weight": 0.781,
+      "type": "walk",
+      "accessible": 1
+    },
+    {
+      "from": "n_G_0029_E",
+      "to": "n_G_0026",
+      "weight": 0.781,
+      "type": "walk",
+      "accessible": 1
+    },
+    {
+      "from": "n_G_0031",
+      "to": "n_G_0028",
+      "weight": 1.432,
+      "type": "walk",
+      "accessible": 1
+    },
+    {
+      "from": "n_G_0028",
+      "to": "n_G_0031",
+      "weight": 1.432,
+      "type": "walk",
+      "accessible": 1
+    },
+    {
+      "from": "n_G_0030",
+      "to": "n_G_0027",
+      "weight": 1.52,
+      "type": "walk",
+      "accessible": 1
+    },
+    {
+      "from": "n_G_0027",
+      "to": "n_G_0030",
+      "weight": 1.52,
+      "type": "walk",
+      "accessible": 1
+    },
+    {
+      "from": "n_G_0027",
+      "to": "n_G_0034_E",
+      "weight": 0.818,
+      "type": "walk",
+      "accessible": 1
+    },
+    {
+      "from": "n_G_0034_E",
+      "to": "n_G_0027",
+      "weight": 0.818,
+      "type": "walk",
+      "accessible": 1
+    },
+    {
+      "from": "n_G_0007",
+      "to": "n_G_0029",
+      "weight": 2.63,
+      "type": "walk",
+      "accessible": 1
+    },
+    {
+      "from": "n_G_0029",
+      "to": "n_G_0007",
+      "weight": 2.63,
+      "type": "walk",
+      "accessible": 1
+    },
+    {
+      "from": "n_G_0029",
+      "to": "n_G_0028_E",
+      "weight": 2.066,
+      "type": "walk",
+      "accessible": 1
+    },
+    {
+      "from": "n_G_0028_E",
+      "to": "n_G_0029",
+      "weight": 2.066,
+      "type": "walk",
+      "accessible": 1
+    },
+    {
+      "from": "n_G_0028",
+      "to": "n_G_0033_E",
+      "weight": 0.742,
+      "type": "walk",
+      "accessible": 1
+    },
+    {
+      "from": "n_G_0033_E",
+      "to": "n_G_0028",
+      "weight": 0.742,
+      "type": "walk",
+      "accessible": 1
+    },
+    {
+      "from": "n_G_0031",
+      "to": "n_G_0032_E",
+      "weight": 0.799,
+      "type": "walk",
+      "accessible": 1
+    },
+    {
+      "from": "n_G_0032_E",
+      "to": "n_G_0031",
+      "weight": 0.799,
+      "type": "walk",
+      "accessible": 1
+    },
+    {
+      "from": "n_G_0030",
+      "to": "n_G_0031_E",
+      "weight": 0.815,
+      "type": "walk",
+      "accessible": 1
+    },
+    {
+      "from": "n_G_0031_E",
+      "to": "n_G_0030",
+      "weight": 0.815,
+      "type": "walk",
+      "accessible": 1
+    },
+    {
+      "from": "n_G_0012",
+      "to": "n_G_0031",
+      "weight": 0.394,
+      "type": "walk",
+      "accessible": 1
+    },
+    {
+      "from": "n_G_0031",
+      "to": "n_G_0012",
+      "weight": 0.394,
+      "type": "walk",
+      "accessible": 1
+    },
+    {
+      "from": "n_G_0012",
+      "to": "n_G_0030",
+      "weight": 1.149,
+      "type": "walk",
+      "accessible": 1
+    },
+    {
+      "from": "n_G_0030",
+      "to": "n_G_0012",
+      "weight": 1.149,
       "type": "walk",
       "accessible": 1
     },

@@ -125,7 +125,7 @@ let edgeType = {};           // "from-to" -> type (walk/escalator/lift)
 let edgeGeom = {};           // "from-to" -> [[lat,lon], ...]
 let shopList = [];           // searchable destinations
 let floorPlanLayers = {};    // floor_label -> L.layerGroup
-let activeFloor = "2";
+let activeFloor = "1";
 
 
 let currentRoute = null;     // { segments:{floor:[latlng]}, transitions:[], origin, dest, steps:[] }
@@ -247,8 +247,8 @@ Promise.all([
 
     buildLegend();
     buildCategoryFilter();
-    showFloor("2");
-    fitToFloor("2");
+    showFloor("1");
+    fitToFloor("1");
     updateLabelVisibility();
     console.log(`Loaded ${Object.keys(nodesById).length} nodes, ${shopList.length} shops, floors ${FLOORS}`);
 });
@@ -297,7 +297,7 @@ function fitOpts(maxZoom) {
 }
 
 // Hide shop labels when zoomed out (avoids clutter); show when zoomed in.
-const LABEL_MIN_ZOOM = 17;
+const LABEL_MIN_ZOOM = 19;
 function updateLabelVisibility() {
     map.getContainer().classList.toggle("hide-labels", map.getZoom() < LABEL_MIN_ZOOM);
 }
@@ -635,7 +635,7 @@ function makeAutocomplete(inputId, listId, onSelect) {
 }
 
 makeAutocomplete("fromInput", "fromSuggestions", s => setFrom(s));
-makeAutocomplete("toInput", "toSuggestions", s => { toShop = s; updateNavigateBtn(); });
+makeAutocomplete("toInput", "toSuggestions", s => setTo(s));
 
 // ── QR scanning ───────────────────────────────────────────────────────────────
 const qrOverlay = document.getElementById("qrOverlay");
@@ -720,6 +720,16 @@ function setTo(shop) {
     toShop = shop;
     document.getElementById("toInput").value = shop.name;
     updateNavigateBtn();
+    showToPreview();
+}
+
+// When a destination is chosen (before navigating), jump to its floor, drop the
+// destination marker, and zoom in on it.
+function showToPreview() {
+    if (!toShop || currentRoute) return;   // an active route view takes precedence
+    showFloor(toShop.floor_label);          // clears markerLayer (no route yet)
+    L.marker([toShop.lat, toShop.lon], { icon: endLocation }).addTo(markerLayer);
+    map.setView([toShop.lat, toShop.lon], 20, { animate: true });
 }
 
 // Tap-to-select: clicking a shop polygon offers "From here" / "To here".

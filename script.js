@@ -222,12 +222,21 @@ Promise.all([
         },
     });
 
-    // Searchable destinations: named shops + facilities (toilets, lifts, ...)
+    // Searchable destinations: named shops (one entry per shop — multiple entrances
+    // on the same floor are grouped, and routing picks the nearest) + facilities.
+    const shopGroups = {};
     const facilityNodes = [];
     for (const [id, n] of Object.entries(nodesById)) {
-        if (n.name) shopList.push({ name: n.name, nodeId: id, floor_label: n.floor_label, lat: n.lat, lon: n.lon, category: normCat(n.category) });
-        else if (FACILITIES[n.type]) facilityNodes.push({ id, n });
+        if (n.name) {
+            const key = `${n.name}|${n.floor_label}`;
+            if (!shopGroups[key]) shopGroups[key] = { name: n.name, floor_label: n.floor_label, lat: n.lat, lon: n.lon, category: normCat(n.category), nodeIds: [] };
+            shopGroups[key].nodeIds.push(id);
+        } else if (FACILITIES[n.type]) {
+            facilityNodes.push({ id, n });
+        }
     }
+    const shops = Object.values(shopGroups).map(s => ({ ...s, nodeId: s.nodeIds[0] }));
+
     // number facilities that repeat on the same floor (e.g. "Toilet 1", "Toilet 2")
     const facTotal = {}, facSeen = {};
     for (const { n } of facilityNodes) {
@@ -239,11 +248,11 @@ Promise.all([
         const k = `${n.type}|${n.floor_label}`;
         facSeen[k] = (facSeen[k] || 0) + 1;
         const suffix = facTotal[k] > 1 ? ` ${facSeen[k]}` : "";
-        return { name: `${f.icon} ${f.label}${suffix}`, nodeId: id, floor_label: n.floor_label, lat: n.lat, lon: n.lon, isFacility: true, category: "Facilities" };
+        return { name: `${f.icon} ${f.label}${suffix}`, nodeId: id, nodeIds: [id], floor_label: n.floor_label, lat: n.lat, lon: n.lon, isFacility: true, category: "Facilities" };
     });
-    shopList.sort((a, b) => a.name.localeCompare(b.name));
+    shops.sort((a, b) => a.name.localeCompare(b.name));
     facList.sort((a, b) => a.name.localeCompare(b.name));
-    shopList = shopList.concat(facList);
+    shopList = shops.concat(facList);
 
     buildLegend();
     buildCategoryFilter();
@@ -340,6 +349,25 @@ function aStar(startId, goalId) {
         }
     }
     return null;
+}
+
+function pathLength(path) {
+    let d = 0;
+    for (let i = 0; i < path.length - 1; i++) {
+        const link = (adj[path[i]] || []).find(e => e.to === path[i + 1]);
+        if (link) d += link.weight;
+    }
+    return d;
+}
+
+// Try every entrance combination and return the shortest path (nearest entrances).
+function bestPath(fromIds, toIds) {
+    let best = null, bestLen = Infinity;
+    for (const a of fromIds) for (const b of toIds) {
+        const p = aStar(a, b);
+        if (p) { const len = pathLength(p); if (len < bestLen) { bestLen = len; best = p; } }
+    }
+    return best;
 }
 
 // ── Build route model (split by floor + transitions) ──────────────────────────
@@ -547,7 +575,7 @@ document.querySelectorAll(".clear-field").forEach(btn => {
 
 function triggerRoute() {
     if (!fromShop || !toShop || !graph) return;
-    const path = aStar(fromShop.nodeId, toShop.nodeId);
+    const path = bestPath(fromShop.nodeIds || [fromShop.nodeId], toShop.nodeIds || [toShop.nodeId]);
     if (!path) { alert("No route found between these locations."); return; }
 
     currentRoute = buildRoute(path);
@@ -690,11 +718,11 @@ function handleQr(data) {
     }
     if (name && !nodeId) {
         const hit = shopList.find(s => s.name.toLowerCase() === name.toLowerCase());
-        if (hit) nodeId = hit.nodeId;
+        if (hit) { setFrom(hit); return; }   // grouped entry — carries all entrances
     }
     if (nodeId && nodesById[nodeId]) {
         const n = nodesById[nodeId];
-        setFrom({ name: name || n.name || nodeId, nodeId, floor_label: n.floor_label, lat: n.lat, lon: n.lon });
+        setFrom({ name: name || n.name || nodeId, nodeId, nodeIds: [nodeId], floor_label: n.floor_label, lat: n.lat, lon: n.lon });
     } else {
         alert(`QR scanned: "${data}"\nCould not match a known location.`);
     }

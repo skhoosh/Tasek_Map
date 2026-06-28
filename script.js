@@ -437,10 +437,19 @@ function pin(latlng, iconName) {
     });
 }
 
+// Before a route is run, keep the chosen From/To pins on the map (each shows on
+// its own floor; both show when they share the active floor).
+function renderEndpointPreviews() {
+    if (fromShop && fromShop.floor_label === activeFloor)
+        L.marker([fromShop.lat, fromShop.lon], { icon: startLocation }).addTo(markerLayer);
+    if (toShop && toShop.floor_label === activeFloor)
+        L.marker([toShop.lat, toShop.lon], { icon: endLocation }).addTo(markerLayer);
+}
+
 function renderRouteForActiveFloor() {
     routeLayer.clearLayers();
     markerLayer.clearLayers();
-    if (!currentRoute) return;
+    if (!currentRoute) { renderEndpointPreviews(); return; }
 
     const coords = currentRoute.segments[activeFloor];
     if (coords && coords.length) {
@@ -568,7 +577,12 @@ document.querySelectorAll(".clear-field").forEach(btn => {
         if (btn.dataset.target === "fromInput") fromShop = null; else toShop = null;
         const listId = btn.dataset.target === "fromInput" ? "fromSuggestions" : "toSuggestions";
         document.getElementById(listId).classList.add("hidden");
+        // clearing an endpoint invalidates any drawn route; fall back to previews
+        currentRoute = null;
+        document.getElementById("routeInfo").classList.add("hidden");
+        document.getElementById("routeSteps").classList.add("hidden");
         updateNavigateBtn();
+        renderRouteForActiveFloor();   // removes the cleared pin, keeps the other
         inp.focus();
     });
 });
@@ -739,9 +753,17 @@ function setFrom(shop) {
 // start marker, and zoom in on it.
 function showFromPreview() {
     if (!fromShop || currentRoute) return;   // an active route view takes precedence
-    showFloor(fromShop.floor_label);          // clears markerLayer (no route yet)
-    L.marker([fromShop.lat, fromShop.lon], { icon: startLocation }).addTo(markerLayer);
-    map.setView([fromShop.lat, fromShop.lon], 20, { animate: true });
+    showFloor(fromShop.floor_label);          // re-renders both endpoint pins
+    previewView(fromShop);
+}
+
+// Frame the just-picked endpoint — or both, if From and To share the active floor.
+function previewView(justPicked) {
+    if (fromShop && toShop && fromShop.floor_label === toShop.floor_label && fromShop.floor_label === activeFloor) {
+        map.fitBounds(L.latLngBounds([[fromShop.lat, fromShop.lon], [toShop.lat, toShop.lon]]), fitOpts(20));
+    } else {
+        map.setView([justPicked.lat, justPicked.lon], 20, { animate: true });
+    }
 }
 
 function setTo(shop) {
@@ -755,9 +777,8 @@ function setTo(shop) {
 // destination marker, and zoom in on it.
 function showToPreview() {
     if (!toShop || currentRoute) return;   // an active route view takes precedence
-    showFloor(toShop.floor_label);          // clears markerLayer (no route yet)
-    L.marker([toShop.lat, toShop.lon], { icon: endLocation }).addTo(markerLayer);
-    map.setView([toShop.lat, toShop.lon], 20, { animate: true });
+    showFloor(toShop.floor_label);          // re-renders both endpoint pins
+    previewView(toShop);
 }
 
 // Tap-to-select: clicking a shop polygon offers "From here" / "To here".
